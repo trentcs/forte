@@ -14,8 +14,8 @@
   <li>See Trello project (https://trello.com/b/1mF05qWz/taft)</li>
   </ul>
 * Communication Tools (Hipchat | Slack, Trello | PivotalTracker...)
-<ul>  
-  <li>Hipchat for general communication/link sharing</li>
+<ul>
+<li>Hipchat for general communication/link sharing</li>
   <li>Trello for Scrum and Project Management</li>
   </ul>
 * Set Schedule for Standups
