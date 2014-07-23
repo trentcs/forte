@@ -2,7 +2,7 @@
 
 * As a group decide what tech is needed
   <ul>
-  <li>OCR/MCR: Audiveris API (written in Java, so we might need to use J Ruby to interact with that)</li>
+  <li>OCR/OMR: Audiveris API (written in Java, so we might need to use J Ruby to interact with that)</li>
   <li>Backend: Rails with Postgres DB</li>
   <li>Frontend: Angular.js</li>
   <li>Mobile App: Ruby Motion</li>
