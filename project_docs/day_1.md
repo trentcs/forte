@@ -9,13 +9,12 @@
   <li>Deployment: Heroku</li>
   </ul>
 * Begin researching idea and tech
-
 * Build backlog
-  <ul>
+<ul>
   <li>See Trello project (https://trello.com/b/1mF05qWz/taft)</li>
   </ul>
 * Communication Tools (Hipchat | Slack, Trello | PivotalTracker...)
-  <ul>  
+<ul>  
   <li>Hipchat for general communication/link sharing</li>
   <li>Trello for Scrum and Project Management</li>
   </ul>
