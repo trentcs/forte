@@ -1,20 +1,25 @@
 ## Day 1 - Wednesday
 
 * As a group decide what tech is needed
-  -OCR/MCR: Audiveris API (written in Java, so we might need to use J Ruby to interact with that)
-  -Backend: Rails with Postgres DB
-  -Frontend: Angular.js
-  -Mobile App: Ruby Motion
-  -Deployment: Heroku
-  
+  <ul>
+  <li>OCR/MCR: Audiveris API (written in Java, so we might need to use J Ruby to interact with that)</li>
+  <li>Backend: Rails with Postgres DB</li>
+  <li>Frontend: Angular.js</li>
+  <li>Mobile App: Ruby Motion</li>
+  <li>Deployment: Heroku</li>
+  </ul>
 * Begin researching idea and tech
 
 * Build backlog
-  -See Trello project (https://trello.com/b/1mF05qWz/taft)
-  
+  <ul>
+  <li>See Trello project (https://trello.com/b/1mF05qWz/taft)</li>
+  </ul>
 * Communication Tools (Hipchat | Slack, Trello | PivotalTracker...)
-  -Hipchat for general communication/link sharing
-  -Trello for Scrum and Project Management
-
+  <ul>  
+  <li>Hipchat for general communication/link sharing</li>
+  <li>Trello for Scrum and Project Management</li>
+  </ul>
 * Set Schedule for Standups
-  -Check in right after gong rings (~8am, ~1pm, ~5pm) and before we leave
+  <ul>
+  <li>Check in right after gong rings (~8am, ~1pm, ~5pm) and before we leave</li>
+  </ul>
