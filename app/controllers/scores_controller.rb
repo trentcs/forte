@@ -6,7 +6,7 @@ class ScoresController < ApplicationController
   def create
     @score = Score.new(score_params)
     if @score.save
-      redirect score_path(@score)
+      redirect_to score_path(@score)
     else
       render :new
     end
