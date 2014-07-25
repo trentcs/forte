@@ -22,7 +22,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+#css normalize
+gem 'normalize-rails'
 # for aws cloud storage
 gem 'fog'
 # photo resizing

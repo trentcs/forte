@@ -5,15 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div id = "title">
+    <h1>Collard Greenz</h1>
+  </div>
+  <div id = "login_buttons">
   <% if signed_in? %>
+    <button type = 'button'>
     <%= link_to "Sign out", session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign in", new_session_path %>
-    <%= link_to "Sign up", new_user_path %>
-  <% end %>
+    </button>
 
+  <% else %>
+    <button type = 'button'>
+    <%= link_to "Sign in", new_session_path %>
+    </button>
+    <button type = 'button'>
+    <%= link_to "Sign up", new_user_path %>
+   </button>
+  <% end %>
+  </div>
 <%= yield %>
 
 </body>
