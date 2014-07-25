@@ -32,3 +32,8 @@
     <%= form.submit "Sign up" %>
   </div>
 <% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.file_field :avatar %>
+  <%= f.submit "Upload Image"%>
+<% end %>
