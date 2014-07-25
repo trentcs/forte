@@ -4,7 +4,7 @@ class CreateScores < ActiveRecord::Migration
       t.integer :user_id
       t.string :title
       t.string :composer
-      t.boolean :public
+      t.boolean :is_public
       t.string :original_image
       t.string :sound_clip
       t.string :music_xml

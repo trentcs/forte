@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20140724203616) do
   add_index "password_resets", ["user_id"], name: "index_password_resets_on_user_id", using: :btree
 
   create_table "scores", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "composer"
+    t.boolean  "is_public"
+    t.string   "original_image"
+    t.string   "sound_clip"
+    t.string   "music_xml"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
