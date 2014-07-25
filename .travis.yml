@@ -10,5 +10,8 @@ before_script:
 script:
 - RAILS_ENV=test bundle exec rake spec
 
-
+env:
+- secure: "fVN5kUE69fGn1dXt4jcImn4woEtzTwo+wwIuqmTmlmPfQtOGXzBatUn6IrSEFdxeK+MTPSDZsPYl95/C+qXevXT3/avZ9QyfrTr9kr1gBRoxojMOKaH7/9Tlz6TyAY/Y4dxt+JZ4MhzKP2N3YqnhG4fSUZXjURHtrlXwPMQ0WeI="
+- secure: "Z8dnpk1ptWUE6bNdLJtcaxGx/ek17OQaJ3fSPuOHmBZl6ScQNuByApeYghWhevjqjm7+kdbLKUEbCfiJwF16HNDy/aLh619Gb2/M38+eSzDu/hYol4OXFdhq5HfHojDhQexTIoSQImzf9hYhWfFbO2cmpQ6bB3N/SOLlzJSh3aA="
+- secure: "w8usJVqQW2BATUd4Upno9elNgVV5jFoOuvV8y9OrpvDplu/GHKR6wUih36QxNRHdoqbbcKMJqYnQwWn23K3LWVuiU28L3pTTqajd50lYn3s1xWCHLstF1+EBFriZ6ulcJYwgjbCwzcgIXUVUiWROW3ex7uZMsrHmNGBDXguVrcw="
 
