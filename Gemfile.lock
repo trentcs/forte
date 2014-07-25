@@ -138,7 +138,6 @@ GEM
     net-ssh (2.9.1)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
-    normalize-rails (3.0.1)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.9.12.6)
@@ -263,7 +262,6 @@ DEPENDENCIES
   mini_magick
   monban
   monban-generators
-  normalize-rails
   pg
   rails (= 4.1.4)
   rails_12factor

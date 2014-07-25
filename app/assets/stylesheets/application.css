@@ -17,18 +17,19 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-
+  color: #400E75;
 } 
 #title{
   font-family: 'Stint Ultra Expanded', cursive;
-
-  font-size: 1.5em;
+  height: 6em;
   width: 100%;
   border-bottom: 1px solid #400E75;
 
 }
 
 #title h1 {
+  font-size: 4em;
+  margin-top: 30px;
   margin-left: 20px;
   color: orange;
 }
@@ -65,3 +66,13 @@ button {
     color: white;
     text-decoration: none;
   }
+
+  
+  #backsplash {
+    height: 500px;
+    width: 100%;
+    background: url('notes.jpg');
+  }
+
+
+
