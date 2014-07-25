@@ -9,6 +9,7 @@ class ScoresController < ApplicationController
       redirect score_path(@score)
     else
       render :new
+    end
 
   end
 

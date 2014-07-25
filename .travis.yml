@@ -8,8 +8,7 @@ before_script:
   - bundle exec rake db:test:prepare --trace
 
 script:
-- echo $AWS_BUCKET
-- RAILS_ENV=test bundle exec rake spec
+  - RAILS_ENV=test bundle exec rake spec
 
 env:
   global:
