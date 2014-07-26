@@ -10,9 +10,9 @@ $(function(){
 			type: "post",
 			url: "/session",
 			data: formData,
-			success: function(response){console.log("success received is " + response.redirect)},
+			success: function(response){window.location.replace(response.redirect);},
 			error: function(response){
-				$(".login_errors > li").text("Email or password is incorrect.")
+				$(".login_errors > li").text("Email or password is incorrect.");
 			}
 		});
 	});

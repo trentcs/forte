@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     puts "DATA SENT OVER IS: #{params[:session]}"
     #successful login
     if sign_in(user)
-      redirect_to user_path(user)
       render json: {redirect: user_path(user)}
     #unsuccessfull login  
     else
