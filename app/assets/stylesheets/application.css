@@ -54,15 +54,18 @@ body {
   margin-bottom: 0;
   margin-top: 10px;
   height: 37px;
+  
+  width: 45%; /* auto */
+  text-align: center; 
+  background: #400E75;
+  }
+  
+.normal_buttons {  
   text-transform: none;
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
-  width: 45%; /* auto */
-  text-align: center; 
-  background: #400E75;
-
-  }
+}
 
   .button a {
     margin-top: 7px;

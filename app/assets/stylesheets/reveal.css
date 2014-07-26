@@ -32,6 +32,14 @@
 			color: white;
 			margin-bottom: 20px;
 		}
+
+		.reveal-modal ul {
+			color: red;
+			margin-top: 40px;
+			text-align: center;
+
+
+		}
 		
 	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
 	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}

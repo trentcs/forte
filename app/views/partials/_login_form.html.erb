@@ -1,7 +1,5 @@
 <%= form_for :session, url: session_path, :html=>{:id => "loginform", :name => "form"} do |form| %>
-	<ul class="login_errors">
-    	<li></li>
-  	</ul>
+	
 	  <div>
 	    <%= form.email_field :email, class: 'login_field', :placeholder => "Email"%>
 	  </div>
@@ -11,4 +9,7 @@
 	  <div>
 	    <%= form.submit "Sign in", class: 'login_submit button' %>
 	  </div>
+	  <ul class="login_errors">
+    	<li></li>
+  	</ul>
 <% end %>
