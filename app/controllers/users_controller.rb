@@ -10,9 +10,9 @@ class UsersController < ApplicationController
 
     if @user.valid?
       sign_in(@user)
-      redirect_to user_path(@user)
+      render json: {redirect: user_path(@user)}
     else
-      render :new
+      render json: {errors: @user.errors.full_messages}, status: 422
     end
   end
 
