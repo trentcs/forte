@@ -1,4 +1,4 @@
-<%= form_for :user do |form| %>
+<%= form_for :user, :html=>{:id => "signupform", :name => "form"} do |form| %>
   <ul class="signup_errors">
     <li></li>
   </ul>
@@ -19,7 +19,7 @@
     <%= form.password_field :password %>
   </div>
   <div>
-    <%= form.label :image_url %>
+    <%= form.label :user_image_url %>
     <%= form.file_field :user_image_url %>
   </div>
   <div>

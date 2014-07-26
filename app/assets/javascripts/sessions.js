@@ -1,9 +1,7 @@
 $(function(){
-	console.log("sessions.js loaded on page load")
-
+	console.log("Page load sessions.js")
 	$("#loginform").submit(function(e){
 		e.preventDefault();
-		console.log("in the log in submit action");
 		var formData = $(this).serialize();
 
 		$.ajax({
