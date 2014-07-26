@@ -8,4 +8,13 @@ class User < ActiveRecord::Base
   validates :password_digest, presence: true
   #profile picture using carrierwave
   mount_uploader :user_image_url, ProfilePictureUploader
+
+  #set default image before creating a user
+  before_create :set_default_image
+
+
+  def set_default_image
+    self.user_image_url = open('/download.jpeg')
+  end
+
 end
