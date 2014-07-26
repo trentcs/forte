@@ -17,18 +17,5 @@
 
 
 $(function(){
-	console.log("loaded")
-  $('#loginform').submit(function(e){
-    e.preventDefault();
-    console.log("in the login form!")
-  });
-
-  // $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
-
-  $('#modaltrigger').on("click", function(e){
-  	e.preventDefault();
-  	console.log("w00t");
-  	$('#loginform').fadeToggle(400);
-  	return false;
-  });
+	
 });

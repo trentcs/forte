@@ -1,13 +1,13 @@
 <%= form_for :session, url: session_path, :html=>{:id => "loginform", :name => "form"} do |form| %>
 	  <div>
 	    <%= form.label :email %>
-	    <%= form.email_field :email, class: "txtfield" %>
+	    <%= form.email_field :email%>
 	  </div>
 	  <div>
 	    <%= form.label :password %>
-	    <%= form.password_field :password, class: "txtfield"%>
+	    <%= form.password_field :password%>
 	  </div>
 	  <div>
-	    <%= form.submit "Sign in", :class => 'hidemodal'%>
+	    <%= form.submit "Sign in"%>
 	  </div>
 <% end %>

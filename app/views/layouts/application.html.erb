@@ -21,11 +21,11 @@
 
   <% else %>
     <div class = 'button' >
-    <%= link_to "Sign in", new_session_path, id: "modaltrigger" %>
+      <a href="#" data-reveal-id="myModal1">Sign in</a>
     </div>
-    <div class = 'button'>
-    <%= link_to "Sign up", new_user_path %>
-   </div>
+    <div class = 'button' >
+      <a href="#" data-reveal-id="myModal2">Sign up</a>
+    </div>
   <% end %>
   </div>    
 <%= yield %>
