@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
 
   def set_default_image
-    self.user_image_url = open('/download.jpeg')
+    self.user_image_url = open("download.jpeg")
   end
 
 end

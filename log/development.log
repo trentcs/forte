@@ -18447,3 +18447,254 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-26 15:48:37 -05
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 15:48:37 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 15:51:20 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.7ms)
+  Rendered partials/_signup_form.html.erb (1.4ms)
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 15:51:20 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-26 15:51:20 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-26 15:51:20 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 15:51:21 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:52:20 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sgsdg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sgsdg@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 110ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (16.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:52:23 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sgsdg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sgsdg@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 76ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (11.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:52:23 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sgsdg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sgsdg@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 74ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (11.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:52:24 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sgsdg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sgsdg@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 75ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (11.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:52:24 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sgsdg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sgsdg@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 75ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (11.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:54:03 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+Completed 422 Unprocessable Entity in 77ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:54:15 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+Completed 422 Unprocessable Entity in 77ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:54:21 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:54:27 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sdgsdg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sdgsdg@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sdgsdg@gmail.com' LIMIT 1
+Completed 422 Unprocessable Entity in 76ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:54:37 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sdgsdfg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sdgsdfg@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 78ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (11.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:54:43 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sdgsdfg@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sdgsdfg@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 75ms
+
+Errno::ENOENT (No such file or directory - /download.jpeg):
+  app/models/user.rb:17:in `set_default_image'
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (11.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:57:54 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '' LIMIT 1
+Completed 422 Unprocessable Entity in 145ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-26 15:58:02 -0500
+Processing by UsersController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+wV9V02noLElrCPUAQzjVXGnybSR6f1uyXBFWd8o2s=", "user"=>{"first_name"=>"sdgsdg", "last_name"=>"sdgsdg", "email"=>"sdgsdg", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sdgsdg' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sdgsdg' LIMIT 1
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms)
