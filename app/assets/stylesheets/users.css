@@ -1,7 +1,8 @@
 #profile_picture {
 	width: 200px;
 	height: 200px;
-	border-style: solid;
-	border-color: black;
-	border-width: thick;
+	background-color: #DDD;
+	display: inline-block;
+	float: left;
+
 }
