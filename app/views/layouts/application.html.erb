@@ -14,19 +14,19 @@
   </div>
   <div id = "login_buttons">
   <% if signed_in? %>
-    <button type = 'button'>
+    <div class = 'button'>
     <%= link_to "Sign out", session_path, method: :delete %>
-    </button>
+    </div>
 
   <% else %>
-    <button type = 'button'>
+    <div class = 'button'>
     <%= link_to "Sign in", new_session_path %>
-    </button>
-    <button type = 'button'>
+    </div>
+    <div class = 'button'>
     <%= link_to "Sign up", new_user_path %>
-   </button>
+   </div>
   <% end %>
-  </div>
+  </div>    
 <%= yield %>
 
 </body>

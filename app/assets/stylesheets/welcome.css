@@ -1,0 +1,27 @@
+
+
+#backsplash {
+    height: 500px;
+    width: 100%;
+    background: url('notes.jpg');
+  }
+
+#backsplash h2 {
+  padding-top: 25%;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 5em;
+  z-index: 0;
+  color: lightgray;
+  margin-left: 10%;
+
+}
+/*
+#backsplash_2 {
+    height: 500px;
+    width: 100%;
+    background: url('smbtheme.png');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 15% center;
+  }
+*/
