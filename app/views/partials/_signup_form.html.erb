@@ -3,22 +3,18 @@
     <li></li>
   </ul>
   <div>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name, class: 'login_field', :placeholder => "First Name" %>
   </div>
   <div>
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.text_field :last_name,  class: 'login_field', :placeholder => "Last Name" %>
   </div>
   <div>
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email,  class: 'login_field', :placeholder => "Email" %>
   </div>
   <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.password_field :password,  class: 'login_field', :placeholder => "Password" %>
   </div>
   <div>
-    <%= form.submit "Sign up" %>
+    <%= form.submit "Sign up",  class: 'login_submit button' %>
   </div>
 <% end %>
