@@ -24,4 +24,23 @@
     background-size: cover;
     background-repeat: none;
     background-position: 15% center;
+  }*/
+
+  .login_field {
+      width: 80%;
+      margin-bottom: 15px;
+      margin-left: 25px;
+      line-height: 2em;
+
   }
+
+  .login_submit {
+    background: #FFFFFF;
+    color: black;
+    margin-left: 27%;
+  }
+
+  .login_submit:hover {
+    background-color: orange;
+  }
+    

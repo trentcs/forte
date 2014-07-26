@@ -18,6 +18,9 @@
     <div class = 'button'>
     <%= link_to "Sign out", session_path, method: :delete %>
     </div>
+    <div class = 'button'>
+    <%= link_to "Profile", user_path(current_user) %>
+    </div>
 
   <% else %>
     <div class = 'button' >

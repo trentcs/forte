@@ -3,14 +3,12 @@
     	<li></li>
   	</ul>
 	  <div>
-	    <%= form.label :email %>
-	    <%= form.email_field :email%>
+	    <%= form.email_field :email, class: 'login_field', :placeholder => "Email"%>
 	  </div>
 	  <div>
-	    <%= form.label :password %>
-	    <%= form.password_field :password%>
+	    <%= form.password_field :password, class: 'login_field', :placeholder => "Password"%>
 	  </div>
 	  <div>
-	    <%= form.submit "Sign in"%>
+	    <%= form.submit "Sign in", class: 'login_submit button' %>
 	  </div>
 <% end %>
