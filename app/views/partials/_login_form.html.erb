@@ -1,4 +1,7 @@
 <%= form_for :session, url: session_path, :html=>{:id => "loginform", :name => "form"} do |form| %>
+	<ul class="login_errors">
+    	<li></li>
+  	</ul>
 	  <div>
 	    <%= form.label :email %>
 	    <%= form.email_field :email%>

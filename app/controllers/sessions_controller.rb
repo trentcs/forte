@@ -6,12 +6,18 @@ class SessionsController < ApplicationController
 
   def create
     user = authenticate_session(session_params)
-
+    puts "DATA SENT OVER IS: #{params[:session]}"
+    #successful login
     if sign_in(user)
       redirect_to user_path(user)
+      render json: {redirect: user_path(user)}
+    #unsuccessfull login  
     else
-      render :new
+      error = "Email or password is incorrect."
+      render json: error, status: 422
     end
+
+
   end
 
   def destroy
@@ -25,4 +31,3 @@ class SessionsController < ApplicationController
     params.require(:session).permit(:email, :password)
   end
 end
-
