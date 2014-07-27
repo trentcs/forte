@@ -40,6 +40,7 @@ gem 'image_suckr'
 gem 'spring',        group: :development
 
 gem 'rails_12factor', group: :production
+
 gem 'coveralls', require: false
 gem 'travis'
 
