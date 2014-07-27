@@ -11,13 +11,14 @@
 </div>
 <div class='my_scores'>
   <h3>My Scores</h3>
+<div class = 'add_score'>
+<%= link_to "Add a new score", new_score_path %>
+</div>
 <ul>
   <% @user.scores.each do |score| %>
   <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= link_to image_tag(score.original_image.thumb.url), score_path(score)%></span> </li>
   <% end %>
 </ul>
-<%= link_to "Add a new score", new_score_path %>
-
 </div>
 
 
