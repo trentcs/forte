@@ -1,0 +1,396 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+
+
+ */
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #400E75;
+} 
+#title{
+  font-family: 'Stint Ultra Expanded', cursive;
+  height: 6em;
+  width: 100%;
+  border-bottom: 1px solid #400E75;
+
+}
+
+#title h1 {
+  font-size: 5em;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+#title h1 a {
+  color: orange;
+  text-decoration: none;
+}
+
+/*#title h1 a:hover {
+  color: #400E75;
+}*/
+
+#login_buttons{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: 5px;
+  width: 15%;
+
+}
+.button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  height: 37px;
+  
+  width: 45%; /* auto */
+  text-align: center; 
+  background: #400E75;
+  }
+  
+.normal_buttons {  
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+  .button a {
+    margin-top: 7px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  
+  
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 58%;
+		margin-left: -300px;
+		width: 300px;
+		background: rgba(0,0,0,.0); 
+		position: absolute;
+		z-index: 101;
+		padding: 30px 40px 34px;
+		}
+		.reveal-modal h2 {
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			font-size: 3em;
+			color: white;
+			margin-bottom: 20px;
+		}
+
+		.reveal-modal ul {
+			color: red;
+			margin-top: 40px;
+			text-align: center;
+
+
+		}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+	/*
+		
+	NOTES
+	
+	Close button entity is &#215;
+	
+	Example markup
+	
+	<div id="myModal" class="reveal-modal">
+		<h2>Awesome. I have it.</h2>
+		<p class="lead">Your couch.  I it's mine.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
+	*/
+/* line 4, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 9, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_title,
+.score_show_composer {
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* line 16, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_composer {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* line 21, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_image {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px #888888;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+#profile_picture {
+
+	height: 140px;
+  width: auto;
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 2%;
+  border: 1px solid #400E75;
+}
+
+#profile_head {
+  height: 100px;
+  background-color: lightgray;
+}
+
+#profile_username{
+  color: #400E75;
+  margin-top: 60px;
+  font-size: 2.5em;
+  margin-left: 20%;
+  width: 50%;
+  display: inline-block;
+}
+
+#profile_username h2{
+  margin-bottom: -300px;
+}
+
+#edit_link {
+  margin-top: 8%;
+  margin-left: 75px;
+  width: 10%;
+  float: left;
+  display: inline-block;
+}
+
+#edit_link a,
+.my_scores a
+{
+    text-decoration: none;
+}
+
+#edit_link a:hover,
+.my_scores a:hover
+{
+    color: orange;
+}
+
+
+.my_scores {
+  padding-top: 40px;
+  width: 60%;
+  display: inline-block;
+  float: right;
+  color: #400E75;
+  padding-right: 18%;
+}
+
+.my_scores h3 {
+  font-size: 1.5em;
+  padding-bottom: .5em;
+  text-decoration: underline;
+  width: 50%;
+  display: inline-block;
+}
+
+.my_scores ul {
+  margin-top: 20px;
+}
+
+.my_scores li {
+  border-bottom: 1px solid #400E75;
+  line-height: 50px;
+}
+
+.score_title {
+  display: inline-block;
+  width: 40%;
+}
+.composer {
+  
+}
+.thumbnail {
+  float: right;
+  margin-right: 30px;
+  height: 50px;
+  /*border: 1px solid black;*/
+}
+
+.add_score {
+  width: 20%;
+  text-align: right;
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+}
+
+
+
+
+
+#backsplash {
+    height: 500px;
+    width: 100%;
+    background: url('notes.jpg');
+  }
+
+#backsplash h2 {
+  padding-top: 25%;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 5em;
+  z-index: 0;
+  color: lightgray;
+  margin-left: 10%;
+
+}
+
+/*
+#backsplash_2 {
+    height: 500px;
+    width: 100%;
+    background: url('smbtheme.png');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 15% center;
+  }*/
+
+  .login_field {
+      width: 80%;
+      margin-bottom: 15px;
+      margin-left: 25px;
+      line-height: 2em;
+
+  }
+
+  .login_submit {
+    background: #FFFFFF;
+    color: black;
+    margin-left: 27%;
+  }
+
+  .login_submit:hover {
+    background-color: orange;
+  }
+    
