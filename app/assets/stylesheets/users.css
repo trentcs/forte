@@ -1,4 +1,5 @@
 #profile_picture {
+
 	height: 25%;
   width: auto;
   position: absolute;
@@ -24,4 +25,4 @@
 #profile_username h2{
   margin-bottom: -300px;
 }
-  
+
