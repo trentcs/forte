@@ -6,8 +6,18 @@
 </div>
 <%= image_tag(@user.user_image_url, id: 'profile_picture') %>
 
-
-
+<div id='edit_link'>
+  <%= link_to "Edit Profile", edit_user_path %>
+</div>
+<div class='my_scores'>
+  <h3>My Scores</h3>
+<ul>
+  <% @user.scores.each do |score| %>
+  <li><%= link_to score_path(score), "#{score.name}" %></li>
+  <% end %>
+</ul>
 <%= link_to "Add a new score", new_score_path %>
-<%= link_to "Edit Profile", edit_user_path %>
+
+</div>
+
 
