@@ -1,0 +1,1598 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-27 10:44:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (8.8ms)
+  Rendered partials/_signup_form.html.erb (1.6ms)
+  Rendered welcome/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 146ms (Views: 136.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started GET "/assets/notes.jpg" for 127.0.0.1 at 2014-07-27 10:44:38 -0500
+
+
+Started POST "/session" for 127.0.0.1 at 2014-07-27 10:44:55 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxLpjfVTSxD5ZSJXT+IMxA3wR9d4zDhcA9nRT4ziDdc=", "session"=>{"email"=>"trent@aol.com12345678", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'trent@aol.com12345678' LIMIT 1
+Completed 422 Unprocessable Entity in 23ms (Views: 0.2ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxLpjfVTSxD5ZSJXT+IMxA3wR9d4zDhcA9nRT4ziDdc=", "session"=>{"email"=>"trent@aol.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'trent@aol.com' LIMIT 1[0m
+Completed 200 OK in 80ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScore Load (0.4ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (82.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 93ms (Views: 87.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:00 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:02 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:45:05 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.4ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:28 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:46:38 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:46:39 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (2.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:46 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:47:57 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:48:31 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:32 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:43 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:49:53 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:25 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:50:45 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:51:01 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:51:50 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (Invalid CSS after "  font-size 2em": expected "{", was ";"
+  (in /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss:17)):
+    3: <head>
+    4:   <title>PitchesAndRows</title>
+    5:   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+    9:   <link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+  app/assets/stylesheets/scores.css.scss:17
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4448748778369556489_70295767824480'
+
+
+  Rendered /Users/trentcs/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/trentcs/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/trentcs/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mScore Load (0.2ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:52:29 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mScore Load (0.2ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:04 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScore Load (0.9ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (10.9ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:10 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:53:12 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:12 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:17 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:54:59 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:25 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:55:38 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:56:00 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:00 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:00 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:00 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:01 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:56:17 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:17 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:17 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:18 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:32 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:56:52 -0500
+
+
+Started GET "/scores/8" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  Rendered scores/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 10:57:59 -0500
