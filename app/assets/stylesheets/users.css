@@ -1,7 +1,27 @@
 #profile_picture {
-	width: 200px;
-	height: 200px;
-	border-style: solid;
-	border-color: black;
-	border-width: thick;
+	height: 25%;
+  width: auto;
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 2%;
 }
+
+#profile_head {
+  height: 100px;
+  background-color: lightgray;
+}
+
+#profile_username{
+  color: #400E75;
+  margin-top: 60px;
+  font-size: 2.5em;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 20%;
+  width: 50%;
+  display: inline-block;
+}
+
+#profile_username h2{
+  margin-bottom: -300px;
+}
+  
