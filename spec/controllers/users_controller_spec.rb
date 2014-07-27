@@ -14,4 +14,9 @@ describe UsersController do
       expect(response.status).to eq(200)
     end
 
+    it "should edit a user" do
+      user = User.create(first_name: "luke", last_name: "skywalker", email: "lskywalker@aol.com", password_digest: "password")
+      user.update(first_name: "Luke")
+      expect(user.first_name).to eq("Luke")
+    end
 end

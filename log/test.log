@@ -71,3 +71,33 @@ Processing by UsersController#show as HTML
   [1m[36mScore Load (5.9ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 6]]
 Completed 200 OK in 109ms (Views: 87.7ms | ActiveRecord: 7.7ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lskywalker@aol.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-07-27 22:51:33.584675"], ["email", "lskywalker@aol.com"], ["first_name", "luke"], ["last_name", "skywalker"], ["password_digest", "password"], ["updated_at", "2014-07-27 22:51:33.584675"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'lskywalker@aol.com' AND "users"."id" != 7) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "first_name" = $1, "updated_at" = $2 WHERE "users"."id" = 7[0m  [["first_name", "Luke"], ["updated_at", "2014-07-27 22:51:33.594775"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jsmitty@aol.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-07-27 22:51:33.604311"], ["email", "jsmitty@aol.com"], ["first_name", "John"], ["last_name", "Smith"], ["password_digest", "yoloyolo"], ["updated_at", "2014-07-27 22:51:33.604311"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'han@solo.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-07-27 22:51:33.611497"], ["email", "han@solo.com"], ["first_name", "hans"], ["last_name", "solo"], ["password_digest", "password"], ["updated_at", "2014-07-27 22:51:33.611497"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/9" for 127.0.0.1 at 2014-07-27 17:51:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 9]]
+Completed 200 OK in 114ms (Views: 92.2ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
