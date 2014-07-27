@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update(user_params)
     @errors = []
+
     if @user.valid?
       render json: {redirect: user_path(@user)}
     else
