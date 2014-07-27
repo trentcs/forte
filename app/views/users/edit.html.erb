@@ -1,28 +1,29 @@
+<div class="user_edit">
 <%= form_for @user, :html=>{:id => "editform", :name => "form"} do |form| %>
+  <div class="edit_user_field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: 'edit_field' %>
+  </div>
+  <div class="edit_user_field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name,  class: 'edit_field'%>
+  </div>
+  <div class="edit_user_field edit_email">
+    <%= form.label :email %>
+    <%= form.text_field :email,  class: 'edit_field' %>
+  </div>
+  <div class="edit_user_field edit_image">
+    <%= form.label :user_image_url, "Profile picture" %>
+    <%= form.file_field :user_image_url,  class: 'edit_field' %>
+  </div>
+  <div class="edit_user_field">
+    <%= form.hidden_field :id, id: "user_id" %>
+  </div>
+  <div class="edit_user_submit">
+    <%= form.submit "Submit",  class: 'edit_submit button' %>
+  </div>
   <ul class="edit_errors">
   	<li></li>
   </ul>
-  <div>
-  	<%= form.label :first_name %>
-    <%= form.text_field :first_name, class: 'edit_field' %>
-  </div>
-  <div>
-  	<%= form.label :last_name %>
-    <%= form.text_field :last_name,  class: 'edit_field'%>
-  </div>
-  <div>
-  	<%= form.label :email %>
-    <%= form.text_field :email,  class: 'edit_field' %>
-  </div>
-  <div>
-  	<%= form.label :user_image_url, "Profile picture" %>
-    <%= form.file_field :user_image_url,  class: 'edit_field' %>
-  </div>
-
-  <div>
-    <%= form.hidden_field :id, id: "user_id" %>
-  </div>
-  <div>
-    <%= form.submit "Submit",  class: 'edit_submit button' %>
-  </div>
 <% end %>
+</div>

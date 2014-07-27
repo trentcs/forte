@@ -28,5 +28,58 @@ body {
   box-shadow: 5px 5px 5px #888888;
   }
 
+.score_form {
+  margin-top: 4em;
+  width: 50%;
+  margin-left: 35%;
+
+}
+.score_field {
+  line-height: 2em;
+  margin-bottom: 25empx;
+}
+.score_field input {
+  line-height: 2em;
+  width: 50%;
+}
+
+*::-webkit-input-placeholder {
+    font-size: 1.25em;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    font-size: 2em;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    font-size: 2em;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 2em;
+}
+
+.score_submit {
+  margin-left: 3%;
+  margin-top: 5em;
+}
+
+.score_submit input[type="submit"]{
+  color: white;
+}
+
+.score_image_field {
+  display: inline-block;
+  float: left;
+  width: 30%;
+}
+
+.score_public_field {
+
+ display: inline-block;
+ float: right; 
+ width: 30%;
+ margin-right: 30%;
+}
 
 

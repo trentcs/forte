@@ -1,0 +1,71 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #400E75;
+} 
+#title{
+  font-family: 'Stint Ultra Expanded', cursive;
+  height: 6em;
+  width: 100%;
+  border-bottom: 1px solid #400E75;
+
+}
+
+#title h1 {
+  font-size: 5em;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+#title h1 a {
+  color: orange;
+  text-decoration: none;
+}
+
+/*#title h1 a:hover {
+  color: #400E75;
+}*/
+
+#login_buttons{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: 5px;
+  width: 15%;
+
+}
+.button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  height: 37px;
+  
+  width: 45%; /* auto */
+  text-align: center; 
+  background: #400E75;
+  }
+  
+.normal_buttons {  
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+  .button a {
+    margin-top: 7px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  
+  

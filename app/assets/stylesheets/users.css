@@ -1,10 +1,10 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-#profile_picture {
+.profile_picture {
 
-	height: 140px;
-  width: auto;
+	width: 175px;
+  height: 140px;
   position: absolute;
   margin-top: -65px;
   margin-left: 2%;
@@ -98,5 +98,28 @@ body {
   margin-top: 5px;
 }
 
+.user_edit {
+  text-align: center;
+  margin-left: 15%;
+  width: 70%;
+  margin-top: 30px;
+
+}
+.edit_user_field {
+  line-height: 2em;
+}
+
+.edit_user_field input[type='text'] {
+  line-height: 2em;
+  width: 20%;
+}
+
+.edit_email {
+  margin-left: 30px;
+}
+
+.edit_image {
+  margin-left: 30px;
+}
 
 

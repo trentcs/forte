@@ -1,11 +1,21 @@
-<%= form_for @score do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.label :composer %>
-<%= f.text_field :composer %>
-<%= f.label :is_public %>
+<div class = 'score_form'>
+  <%= form_for @score do |f| %>
+<div class = 'score_field'>
+  <%= f.text_field :title, placeholder: 'Title' %>
+</div>
+<div class = 'score_field'>
+<%= f.text_field :composer, placeholder: 'Composer' %>
+</div>
+<div class = 'score_public_field'>
+<%= f.label 'Public' %>
 <%= f.check_box :is_public %>
-<%= f.label :original_image %>
+</div>
+<div class = 'score_image_field'>
+<%= f.label :image %>
 <%= f.file_field :original_image %>
-<%= f.submit "Create Score" %>
+</div>
+<div class = 'score_submit'>
+<%= f.submit "Create Score", class: 'button' %>
+</div>
 <% end %>
+</div>  
