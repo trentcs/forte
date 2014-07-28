@@ -15454,3 +15454,325 @@ Migrating to CreatePitches (20140728025128)
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "pitches" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-07-28 03:11:42.769836"], ["updated_at", "2014-07-28 03:11:42.769836"]]
   [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-27 22:17:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (7.3ms)
+  Rendered partials/_signup_form.html.erb (1.6ms)
+  Rendered welcome/index.html.erb within layouts/application (15.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 63 LIMIT 1
+Completed 200 OK in 152ms (Views: 140.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:07 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-27 22:17:18 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWFZH0Vnx1XHF6vL+epH07M7hFpQ+zezj5E/bx4boog=", "user"=>{"first_name"=>"papa", "last_name"=>"jones", "email"=>"pop@aol.com", "password"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'pop@aol.com' LIMIT 1
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-07-28 03:17:19.066840"], ["email", "pop@aol.com"], ["first_name", "papa"], ["last_name", "jones"], ["password_digest", "$2a$10$5hqqpMcJCug18VUIY3g.6.48lUDfwZo20ay6pmw6j3PnhvJzbdOLW"], ["updated_at", "2014-07-28 03:17:19.066840"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'pop@aol.com' AND "users"."id" != 1) LIMIT 1[0m
+Completed 200 OK in 167ms (Views: 0.2ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (23.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/assets/no-image.jpg" for 127.0.0.1 at 2014-07-27 22:17:19 -0500
+
+
+Started GET "/scores/new" for 127.0.0.1 at 2014-07-27 22:17:23 -0500
+Processing by ScoresController#new as HTML
+  Rendered scores/new.html.erb within layouts/application (326.5ms)
+Completed 500 Internal Server Error in 339ms
+
+ActionView::Template::Error (undefined method `is_public' for #<Score:0x0000010922eb38>):
+     8: </div>
+     9: <div class = 'score_public_field'>
+    10: <%= f.label 'Public' %>
+    11: <%= f.check_box :is_public %>
+    12: </div>
+    13: <div class = 'score_image_field'>
+    14: <%= f.label :image %>
+  app/views/scores/new.html.erb:11:in `block in _app_views_scores_new_html_erb__3350611812456317830_2224143960'
+  app/views/scores/new.html.erb:2:in `_app_views_scores_new_html_erb__3350611812456317830_2224143960'
+
+
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/spencerolson/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lWFZH0Vnx1XHF6vL+epH07M7hFpQ+zezj5E/bx4boog="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.7ms)
+  Rendered partials/_signup_form.html.erb (0.7ms)
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 22:17:35 -0500
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140724142113)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142113"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScores (20140724142126)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142126"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePasswordResets (20140724203616)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724203616"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateParts (20140728024620)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "instrument_name" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024620"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateMeasures (20140728024653)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024653"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateKeys (20140728024712)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024712"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateClefs (20140728024734)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024734"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateMeasureTimes (20140728024903)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "measure_times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024903"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateNotes (20140728024957)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "type" integer, "stem" integer, "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024957"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreatePitches (20140728025128)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728025128"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mScore Load (0.4ms)[0m  [1mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mScore Load (0.4ms)[0m  [1mSELECT "scores".* FROM "scores"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-07-28 03:52:53.572552"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 03:52:53.572552"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mPart Load (0.7ms)[0m  [1mSELECT "parts".* FROM "parts"[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 03:54:11.232963"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 03:54:11.232963"]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPart Load (0.7ms)[0m  SELECT "parts".* FROM "parts"  WHERE "parts"."score_id" = $1  [["score_id", 2]]
+  [1m[36mPart Load (0.5ms)[0m  [1mSELECT "parts".* FROM "parts"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-07-28 03:56:24.916727"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 03:56:24.916727"]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 03:56:48.424172"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 03:56:48.424172"]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 03:57:09.191044"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 03:57:09.191044"]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "parts" ("created_at", "instrument_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 03:58:39.185617"], ["instrument_name", "Violin"], ["updated_at", "2014-07-28 03:58:39.185617"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "parts" ("created_at", "instrument_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-07-28 03:58:39.225096"], ["instrument_name", "Violin"], ["updated_at", "2014-07-28 03:58:39.225096"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 03:58:39.047833"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 03:58:39.047833"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "parts" SET "score_id" = $1, "updated_at" = $2 WHERE "parts"."id" = 1[0m  [["score_id", 6], ["updated_at", "2014-07-28 03:58:39.227612"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "parts" SET "score_id" = $1, "updated_at" = $2 WHERE "parts"."id" = 2  [["score_id", 6], ["updated_at", "2014-07-28 03:58:39.229605"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mPart Load (0.9ms)[0m  SELECT  "parts".* FROM "parts"   ORDER BY "parts"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parts" ("created_at", "instrument_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 04:07:48.147441"], ["instrument_name", "Violin"], ["updated_at", "2014-07-28 04:07:48.147441"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "parts" ("created_at", "instrument_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-07-28 04:07:48.175676"], ["instrument_name", "Violin"], ["updated_at", "2014-07-28 04:07:48.175676"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 04:07:48.015616"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 04:07:48.015616"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "parts" SET "score_id" = $1, "updated_at" = $2 WHERE "parts"."id" = 3[0m  [["score_id", 7], ["updated_at", "2014-07-28 04:07:48.178283"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "parts" SET "score_id" = $1, "updated_at" = $2 WHERE "parts"."id" = 4  [["score_id", 7], ["updated_at", "2014-07-28 04:07:48.180350"]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "parts" ("created_at", "instrument_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 04:33:07.532579"], ["instrument_name", "Violin"], ["updated_at", "2014-07-28 04:33:07.532579"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "parts" ("created_at", "instrument_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-07-28 04:33:07.561576"], ["instrument_name", "Violin"], ["updated_at", "2014-07-28 04:33:07.561576"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "scores" ("created_at", "music_xml", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-07-28 04:33:07.394958"], ["music_xml", "/Users/spencerolson/Desktop/wario.xml"], ["updated_at", "2014-07-28 04:33:07.394958"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "parts" SET "score_id" = $1, "updated_at" = $2 WHERE "parts"."id" = 5[0m  [["score_id", 8], ["updated_at", "2014-07-28 04:33:07.564239"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "parts" SET "score_id" = $1, "updated_at" = $2 WHERE "parts"."id" = 6  [["score_id", 8], ["updated_at", "2014-07-28 04:33:07.566254"]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
