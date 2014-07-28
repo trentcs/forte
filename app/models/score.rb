@@ -1,4 +1,5 @@
 require "rexml/document"
+require "active_support/core_ext"
 
 class Score < ActiveRecord::Base
   belongs_to :user
@@ -8,17 +9,21 @@ class Score < ActiveRecord::Base
 
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
-  # before_create :create_parts
+  after_create :create_parts
 
-  # def create_parts
-  #   puts "SELFMUSIC XML #{self.music_xml}"
-  #   music_xml_file = open("#{self.music_xml}")
-  #   $doc = REXML::Document.new music_xml_file
+  def create_parts
+    music_xml_file = open(self.music_xml)
+    $hash = Hash.from_xml(File.read(music_xml_file))
 
-  #   score_parts = $doc.elements.to_a("//score-part")
-  #   score_parts.each do |score_part, index|
-  #     self.parts << Part.create(instrument_name: score_part.elements.to_a("//instrument-name")[0].text)
-  #   end
-  # end
+    parts = $hash["score_partwise"]["part_list"]["score_part"]
+    parts = [parts] if parts.is_a?(Hash)
+    # puts "parts is #{parts}"
+
+    parts.each do |part|
+      puts "part is #{part}"
+      self.parts << Part.create(instrument_name: part["part_name"], part_number: part["id"][1..-1].to_i)
+    end
+  end
 
 end
+

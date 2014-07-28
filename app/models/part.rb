@@ -2,18 +2,29 @@ class Part < ActiveRecord::Base
   belongs_to :score
   has_many :measures
   has_many :notes, through: :measures
-  before_create :create_measures
+  after_create :create_measures
 
 
   def create_measures
-    # NOT YET WORKING
-    # part = doc.root.elements["part[@id='P#{self.id}']"]
+    if $hash["score_partwise"]["part"].is_a?(Hash)
+      measures = $hash["score_partwise"]["part"]["measure"]
+    else
+      measures = $hash["score_partwise"]["part"][part_number - 1]["measure"]
+    end
+    
+    measures = [measures] if measures.is_a?(Hash)
+    divisions = nil
 
+    measures.each do |measure|
 
-    # measures = $doc.elements.to_a("//part")
-    # measures.each do |measure|
-    #   Measure.create(SOME SHIT)
-    # end
+      unless measure["attributes"].nil?
+        unless measure["attributes"]["divisions"].nil?
+          divisions = measure["attributes"]["divisions"].to_i
+        end
+      end
+
+      self.measures << Measure.create(number: measure["number"].to_i, divisions: divisions, part_id: self.id)
+    end
   end
 
 end

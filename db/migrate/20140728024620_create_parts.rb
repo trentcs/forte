@@ -3,6 +3,7 @@ class CreateParts < ActiveRecord::Migration
     create_table :parts do |t|
       t.integer :score_id
       t.string :instrument_name
+      t.integer :part_number
       t.timestamps
     end
   end

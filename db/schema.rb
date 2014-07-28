@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728025128) do
+ActiveRecord::Schema.define(version: 20140728024957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20140728025128) do
 
   create_table "measures", force: true do |t|
     t.integer  "number"
-    t.integer  "width"
     t.integer  "divisions"
     t.integer  "part_id"
     t.datetime "created_at"
@@ -52,9 +51,12 @@ ActiveRecord::Schema.define(version: 20140728025128) do
   create_table "notes", force: true do |t|
     t.boolean  "rest"
     t.integer  "duration"
-    t.integer  "type"
+    t.string   "note_type"
     t.integer  "stem"
     t.boolean  "chord"
+    t.string   "voice"
+    t.integer  "alter"
+    t.string   "sci_notation"
     t.integer  "measure_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -63,6 +65,7 @@ ActiveRecord::Schema.define(version: 20140728025128) do
   create_table "parts", force: true do |t|
     t.integer  "score_id"
     t.string   "instrument_name"
+    t.integer  "part_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,15 +78,6 @@ ActiveRecord::Schema.define(version: 20140728025128) do
   end
 
   add_index "password_resets", ["user_id"], name: "index_password_resets_on_user_id", using: :btree
-
-  create_table "pitches", force: true do |t|
-    t.string   "step"
-    t.integer  "alter"
-    t.integer  "octave"
-    t.integer  "note_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "scores", force: true do |t|
     t.integer  "user_id"
