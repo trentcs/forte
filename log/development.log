@@ -15069,3 +15069,388 @@ Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-27 16:35:43 -0
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-27 16:35:43 -0500
+  [1m[36m (28.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (18.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140724142113)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142113"]]
+  [1m[36m (12.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScores (20140724142126)
+  [1m[35m (5.0ms)[0m  BEGIN
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142126"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePasswordResets (20140724203616)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724203616"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateParts (20140728022628)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728022628"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateMeasures (20140728022723)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728022723"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to CreateKeys (20140728022900)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728022900"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateClefs (20140728022950)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728022950"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateTimes (20140728023028)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728023028"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateNotes (20140728024105)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.1ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "voice" integer, "type" character varying(255), "stem" character varying(255), "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024105"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Migrating to CreatePitches (20140728024257)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024257"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140724142113)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142113"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScores (20140724142126)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142126"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePasswordResets (20140724203616)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724203616"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateParts (20140728024620)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024620"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateMeasures (20140728024653)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024653"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateKeys (20140728024712)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024712"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateClefs (20140728024734)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024734"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateMeasureTimes (20140728024903)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024903"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateNotes (20140728024957)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "type" integer, "stem" integer, "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024957"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreatePitches (20140728025128)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728025128"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140724142113)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142113"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScores (20140724142126)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142126"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePasswordResets (20140724203616)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets"  ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724203616"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateParts (20140728024620)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024620"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateMeasures (20140728024653)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024653"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateKeys (20140728024712)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024712"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateClefs (20140728024734)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024734"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateMeasureTimes (20140728024903)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024903"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateNotes (20140728024957)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "type" integer, "stem" integer, "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024957"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreatePitches (20140728025128)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728025128"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mScore Load (0.6ms)[0m  [1mSELECT  "scores".* FROM "scores"   ORDER BY "scores"."id" ASC LIMIT 1[0m
+  [1m[35mScore Load (0.3ms)[0m  SELECT "scores".* FROM "scores"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "scores" ("composer", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["composer", "6 Year-Old"], ["created_at", "2014-07-28 02:59:23.425235"], ["title", "Wario's Fat"], ["updated_at", "2014-07-28 02:59:23.425235"]]
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mPart Load (0.4ms)[0m  SELECT "parts".* FROM "parts"  WHERE "parts"."score_id" = $1  [["score_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "scores" ("composer", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["composer", "6 Year-Old"], ["created_at", "2014-07-28 03:01:33.903354"], ["title", "Wario's Fat"], ["updated_at", "2014-07-28 03:01:33.903354"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mPart Load (0.4ms)[0m  SELECT "parts".* FROM "parts"  WHERE "parts"."score_id" = $1  [["score_id", 2]]
+  [1m[36mMeasure Load (0.4ms)[0m  [1mSELECT "measures".* FROM "measures" INNER JOIN "parts" ON "measures"."part_id" = "parts"."id" WHERE "parts"."score_id" = $1[0m  [["score_id", 2]]
+  [1m[35mNote Load (0.7ms)[0m  SELECT "notes".* FROM "notes" INNER JOIN "measures" ON "notes"."measure_id" = "measures"."id" INNER JOIN "parts" ON "measures"."part_id" = "parts"."id" WHERE "parts"."score_id" = $1  [["score_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "parts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-07-28 03:02:09.634452"], ["updated_at", "2014-07-28 03:02:09.634452"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "parts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-07-28 03:02:25.897437"], ["updated_at", "2014-07-28 03:02:25.897437"]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36mMeasure Load (0.3ms)[0m  [1mSELECT "measures".* FROM "measures"  WHERE "measures"."part_id" = $1[0m  [["part_id", 2]]
+  [1m[35mNote Load (0.5ms)[0m  SELECT "notes".* FROM "notes" INNER JOIN "measures" ON "notes"."measure_id" = "measures"."id" WHERE "measures"."part_id" = $1  [["part_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.5ms)[0m  INSERT INTO "measures" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-07-28 03:02:51.887252"], ["updated_at", "2014-07-28 03:02:51.887252"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mKey Load (0.3ms)[0m  SELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1  [["measure_id", 1]]
+  [1m[36mClef Load (8.7ms)[0m  [1mSELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 1]]
+PG::UndefinedTable: ERROR:  relation "measure_times" does not exist
+LINE 5:                WHERE a.attrelid = '"measure_times"'::regclas...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"measure_times"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "measure_times" does not exist
+LINE 5:                WHERE a.attrelid = '"measure_times"'::regclas...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"measure_times"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "measure_times" does not exist
+LINE 5:                WHERE a.attrelid = '"measure_times"'::regclas...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"measure_times"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "measure_times" does not exist
+LINE 5:                WHERE a.attrelid = '"measure_times"'::regclas...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"measure_times"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+PG::UndefinedTable: ERROR:  relation "measure_times" does not exist
+LINE 5:                WHERE a.attrelid = '"measure_times"'::regclas...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"measure_times"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140724142113)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142113"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScores (20140724142126)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142126"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePasswordResets (20140724203616)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724203616"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateParts (20140728024620)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024620"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateMeasures (20140728024653)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024653"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateKeys (20140728024712)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024712"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateClefs (20140728024734)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024734"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateMeasureTimes (20140728024903)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024903"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateNotes (20140728024957)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "type" integer, "stem" integer, "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024957"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreatePitches (20140728025128)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.1ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728025128"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "measures" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-07-28 03:05:38.900936"], ["updated_at", "2014-07-28 03:05:38.900936"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+PG::UndefinedTable: ERROR:  relation "measure_times" does not exist
+LINE 5:                WHERE a.attrelid = '"measure_times"'::regclas...
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"measure_times"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140724142113)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142113"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateScores (20140724142126)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140724142126"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePasswordResets (20140724203616)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.7ms)[0m  CREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets"  ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140724203616"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateParts (20140728024620)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024620"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateMeasures (20140728024653)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024653"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateKeys (20140728024712)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024712"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreateClefs (20140728024734)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024734"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateMeasureTimes (20140728024903)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "measure_times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024903"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateNotes (20140728024957)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "type" integer, "stem" integer, "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728024957"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to CreatePitches (20140728025128)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140728025128"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "measures" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-07-28 03:06:24.466305"], ["updated_at", "2014-07-28 03:06:24.466305"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mMeasureTime Load (0.3ms)[0m  SELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1  [["measure_id", 1]]
+  [1m[36mKey Load (0.4ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 1]]
+  [1m[35mClef Load (0.4ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.7ms)[0m  INSERT INTO "parts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-07-28 03:11:01.763799"], ["updated_at", "2014-07-28 03:11:01.763799"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "notes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-07-28 03:11:17.901787"], ["updated_at", "2014-07-28 03:11:17.901787"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mPitch Load (0.4ms)[0m  [1mSELECT  "pitches".* FROM "pitches"  WHERE "pitches"."note_id" = $1 LIMIT 1[0m  [["note_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "pitches" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-07-28 03:11:42.769836"], ["updated_at", "2014-07-28 03:11:42.769836"]]
+  [1m[35m (0.3ms)[0m  COMMIT
