@@ -47,6 +47,8 @@ gem 'rails_12factor', group: :production
 gem 'coveralls', require: false
 gem 'travis'
 gem 'pry'
+gem 'capybara'
+gem 'launchy'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
