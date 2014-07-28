@@ -2,8 +2,13 @@
 <html>
 <head>
   <title>PitchesAndRows</title>
+  <%= include_gon %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -33,7 +38,7 @@
       <a href="#" data-reveal-id="myModal2">Sign up</a>
     </div>
   <% end %>
-  </div>    
+  </div>
 <%= yield %>
 
 </body>

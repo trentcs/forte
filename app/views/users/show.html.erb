@@ -8,7 +8,7 @@
   <%= image_tag(@user.user_image_url, class: 'profile_picture') %>
 <% else %>
   <%= image_tag("no-image.jpg", class: 'profile_picture') %>
-<% end %>  
+<% end %>
 
 <div id='edit_link'>
   <%= link_to "Edit Profile", edit_user_path %>
@@ -20,7 +20,9 @@
 </div>
 <ul>
   <% @user.scores.each do |score| %>
+
   <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= score.created_at %></span> </li>
+
   <% end %>
 </ul>
 </div>

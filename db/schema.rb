@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20140728025128) do
 
   create_table "parts", force: true do |t|
     t.integer  "score_id"
+    t.string   "instrument_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
