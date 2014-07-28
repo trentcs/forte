@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users
   resources :scores
+  get '/scores/:id/analytics' => 'scores#analyze'
   
    
   # The priority is based upon order of creation: first created -> highest priority.

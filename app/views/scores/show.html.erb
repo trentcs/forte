@@ -4,6 +4,9 @@
 <div class= 'score_show_composer'>
 <h3 ><%= @score.composer %></h3>
 </div>
+<div class= 'analize_link'>
+  <a href="/scores/<%= @score.id %>/analytics">Analyze!</a>
+</div>
 <div class = 'score_show_image'>
-<%= image_tag(@score.original_image) %>
+<%= image_tag(@score.music_xml) %>
 </div>

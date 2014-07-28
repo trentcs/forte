@@ -20,7 +20,7 @@
 </div>
 <ul>
   <% @user.scores.each do |score| %>
-  <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= link_to image_tag(score.original_image.thumb.url), score_path(score)%></span> </li>
+  <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= score.created_at %></span> </li>
   <% end %>
 </ul>
 </div>

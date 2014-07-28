@@ -1,15 +1,15 @@
 
 
 #backsplash {
-    height: 500px;
+    height: 600px;
     width: 100%;
     background: url('notes.jpg');
   }
 
 #backsplash h2 {
-  padding-top: 25%;
+  padding-top: 30%;
   font-family: 'Roboto', sans-serif; 
-  font-size: 5em;
+  font-size: 4em;
   z-index: 0;
   color: lightgray;
   margin-left: 10%;

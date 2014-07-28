@@ -3,5 +3,5 @@ class Score < ActiveRecord::Base
   has_many :parts
   has_many :measures, through: :parts
   has_many :notes, through: :measures
-  mount_uploader :original_image, OriginalScorePhotoUploader
+  mount_uploader :music_xml, OriginalScorePhotoUploader
 end

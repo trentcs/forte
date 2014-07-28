@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
 
   def create
     user = authenticate_session(session_params)
-    puts "DATA SENT OVER IS: #{params[:session]}"
     #successful login
     if sign_in(user)
       render json: {redirect: user_path(user)}

@@ -101,3 +101,67 @@ Processing by UsersController#show as HTML
   [1m[36mScore Load (0.3ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 9]]
 Completed 200 OK in 114ms (Views: 92.2ms | ActiveRecord: 2.3ms)
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (5.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (21.1ms)[0m  CREATE TABLE "clefs" ("id" serial primary key, "sign" character varying(255), "line" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "keys" ("id" serial primary key, "fifths" integer, "mode" character varying(255), "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "measure_times" ("id" serial primary key, "beats" integer, "beat_type" integer, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "measures" ("id" serial primary key, "number" integer, "width" integer, "divisions" integer, "part_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "notes" ("id" serial primary key, "rest" boolean, "duration" integer, "type" integer, "stem" integer, "chord" boolean, "measure_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "parts" ("id" serial primary key, "score_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "password_resets" ("id" serial primary key, "user_id" integer, "token" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_password_resets_on_user_id" ON "password_resets" USING btree ("user_id")[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "pitches" ("id" serial primary key, "step" character varying(255), "alter" integer, "octave" integer, "note_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "scores" ("id" serial primary key, "user_id" integer, "title" character varying(255), "composer" character varying(255), "music_xml" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "user_image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140728025128')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140724142113')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140724142126')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140724203616')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140728024620')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140728024653')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140728024712')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140728024734')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140728024903')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140728024957')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2014-07-28 11:36:54 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (6.4ms)
+  Rendered partials/_signup_form.html.erb (1.5ms)
+  Rendered welcome/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 31ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jsmitty@aol.com' LIMIT 1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-07-28 16:36:54.441597"], ["email", "jsmitty@aol.com"], ["first_name", "John"], ["last_name", "Smith"], ["password_digest", "yoloyolo"], ["updated_at", "2014-07-28 16:36:54.441597"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'han@solo.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-07-28 16:36:54.456359"], ["email", "han@solo.com"], ["first_name", "hans"], ["last_name", "solo"], ["password_digest", "password"], ["updated_at", "2014-07-28 16:36:54.456359"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/2" for 127.0.0.1 at 2014-07-28 11:36:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 2]]
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lskywalker@aol.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-07-28 16:36:54.540305"], ["email", "lskywalker@aol.com"], ["first_name", "luke"], ["last_name", "skywalker"], ["password_digest", "password"], ["updated_at", "2014-07-28 16:36:54.540305"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'lskywalker@aol.com' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "first_name" = $1, "updated_at" = $2 WHERE "users"."id" = 3  [["first_name", "Luke"], ["updated_at", "2014-07-28 16:36:54.543359"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
