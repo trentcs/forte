@@ -8,16 +8,17 @@ class Score < ActiveRecord::Base
 
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
-  before_create :create_parts
+  # before_create :create_parts
 
-  def create_parts
-    music_xml_file = open(self.music_xml)
-    $doc = REXML::Document.new music_xml_file
+  # def create_parts
+  #   puts "SELFMUSIC XML #{self.music_xml}"
+  #   music_xml_file = open("#{self.music_xml}")
+  #   $doc = REXML::Document.new music_xml_file
 
-    score_parts = $doc.elements.to_a("//score-part")
-    score_parts.each do |score_part, index|
-      self.parts << Part.create(instrument_name: score_part.elements.to_a("//instrument-name")[0].text)
-    end
-  end
+  #   score_parts = $doc.elements.to_a("//score-part")
+  #   score_parts.each do |score_part, index|
+  #     self.parts << Part.create(instrument_name: score_part.elements.to_a("//instrument-name")[0].text)
+  #   end
+  # end
 
 end

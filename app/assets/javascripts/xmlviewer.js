@@ -1,5 +1,5 @@
 console.log(gon.scores)
-console.log(gon.scores.original_image.url)
+console.log(gon.scores.music_xml.url)
 console.log(Vex.Flow)
 
 function getParameter(name) {
@@ -13,7 +13,7 @@ function getParameter(name) {
  $(document).ready(function() {
    var req = new XMLHttpRequest();
    var uri = getParameter('doc');
-   if (! uri) uri = gon.scores.original_image.url;
+   if (! uri) uri = gon.scores.music_xml.url;
    req.open('GET', uri, true);
    req.onreadystatechange = function() {
      console.log(req)

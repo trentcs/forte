@@ -19,4 +19,6 @@ describe UsersController do
       user.update(first_name: "Luke")
       expect(user.first_name).to eq("Luke")
     end
+
+
 end
