@@ -1,0 +1,20 @@
+<div class='pub_scores'>
+<h3>Scores</h3>
+<div class = 'search'>
+  <%= form_tag("/search", method: "get", class: "search") do %>
+    <%= text_field_tag :search, params[:search], :placeholder => "Search by Title or Composer"%>
+  <%= submit_tag("Search", class: "button") %>
+<% end %>
+</div>
+<% if @results.length > 1 %>
+<ul>
+  <% @results.each do |score| %>
+
+  <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= score.created_at %></span> </li>
+
+  <% end %>
+</ul>
+<% else %>
+<h4>Sorry, no results found</h4>
+<% end %>
+</div>

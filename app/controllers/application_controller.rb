@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def require_login
     unless signed_in?
       flash[:error] = "you must be logged in to access this area"
-      redirect_to new_session_path
+      redirect_to root_path
     end
   end
 end
