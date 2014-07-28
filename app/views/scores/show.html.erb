@@ -8,6 +8,9 @@
 <div class= 'analyze_link'>
   <a href="/scores/<%= @score.id %>/analytics">Analyze!</a>
 </div>
+<div class= 'score_delete'>
+  <%= link_to "Delete", delete_path(@score), method: :delete %>
+</div>
 
 
 <div class = 'score_show_image' id="#viewer">

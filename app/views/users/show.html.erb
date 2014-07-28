@@ -16,7 +16,7 @@
 <div class='my_scores'>
   <h3>My Scores</h3>
 <div class = 'add_score'>
-<%= link_to "Add a new score", new_score_path %>
+  <%= link_to "Add a new score", new_score_path %> | <%= link_to "See other scores", scores_path %>
 </div>
 <ul>
   <% @user.scores.each do |score| %>

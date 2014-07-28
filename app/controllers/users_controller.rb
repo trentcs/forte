@@ -18,14 +18,17 @@ class UsersController < ApplicationController
   end
 
   def show
+    require_login
     @user = User.find(params[:id])
   end
 
   def edit
+    require_login
     @user = User.find(params[:id])
   end
 
   def update
+    require_login
     @user = User.find(params[:id])
     @user.update(user_params)
     @errors = []

@@ -91,11 +91,19 @@ body {
 }
 
 .add_score {
-  width: 20%;
+  width: 40%;
   text-align: right;
   display: inline-block;
   float: right;
   margin-top: 5px;
+}
+
+.add_score a { 
+  margin-left: 1px;
+}
+
+#new_score{
+  border-right: 1px solid #400E75
 }
 
 .user_edit {

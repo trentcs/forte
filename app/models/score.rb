@@ -8,6 +8,10 @@ class Score < ActiveRecord::Base
 
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
+  def self.search(search)
+    @scores = where('title LIKE ? OR composer LIKE ? ', "%#{search}%", "%#{search}%")
+  end
+
   # before_create :create_parts
 
   # def create_parts

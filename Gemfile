@@ -8,8 +8,6 @@ gem 'sass-rails', '~> 4.0.3'
 
 gem 'monban'
 
-gem 'gon'
-
 gem 'monban-generators'
 
 #use gon for passing variables

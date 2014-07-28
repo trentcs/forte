@@ -82,4 +82,39 @@ body {
  margin-right: 30%;
 }
 
+.pub_scores ul {
+  margin-top: 20px;
+}
 
+.pub_scores li {
+  border-bottom: 1px solid #400E75;
+  line-height: 50px;
+}
+
+.pub_scores {
+  padding-top: 40px;
+  width: 60%;
+  display: inline-block;
+  float: right;
+  color: #400E75;
+  padding-right: 18%;
+}
+
+.pub_scores h3 {
+  font-size: 1.5em;
+  padding-bottom: .5em;
+  text-decoration: underline;
+  width: 50%;
+  display: inline-block;
+}
+
+.pub_scores a
+{
+    text-decoration: none;
+}
+
+
+.pub_scores a:hover
+{
+    color: orange;
+}
