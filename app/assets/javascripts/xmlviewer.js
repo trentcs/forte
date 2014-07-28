@@ -1,4 +1,6 @@
-
+console.log(gon.scores)
+console.log(gon.scores.original_image.url)
+console.log(Vex.Flow)
 
 function getParameter(name) {
   name = name.replace(/\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -11,12 +13,13 @@ function getParameter(name) {
  $(document).ready(function() {
    var req = new XMLHttpRequest();
    var uri = getParameter('doc');
-   if (! uri) uri = '@score.original_image';
-   req.open('GET', "@score.original_image", true);
+   if (! uri) uri = gon.scores.original_image.url;
+   req.open('GET', uri, true);
    req.onreadystatechange = function() {
+     console.log(req)
      if (req.readyState != 4) return;
      doc = new Vex.Flow.Document(req.responseText);
-     doc.getFormatter().setWidth(800).draw($("#score_show_image")[0]);
+     doc.getFormatter().setWidth(800).draw($("#viewer")[0]);
    };
    req.send(null);
  });
