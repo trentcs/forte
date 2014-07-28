@@ -72,6 +72,8 @@ body {
   display: inline-block;
   float: left;
   width: 30%;
+  margin-top: 10px;
+  margin-left: 15%;
 }
 
 .score_public_field {
@@ -97,7 +99,8 @@ body {
   display: inline-block;
   float: right;
   color: #400E75;
-  padding-right: 18%;
+  padding-right: 21%;
+  text-align: center;
 }
 
 .pub_scores h3 {
@@ -117,4 +120,17 @@ body {
 .pub_scores a:hover
 {
     color: orange;
+}
+
+.pub_scores input[type='text'] {
+  line-height: 2.5em;
+  width: 30%
+}
+.pub_scores input[type='submit'] {
+  width: 15%;
+  color: #FFFFFF;
+}
+
+.pub_scores h4 {
+  margin-top: 2em;
 }
