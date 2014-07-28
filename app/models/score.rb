@@ -12,7 +12,7 @@ class Score < ActiveRecord::Base
   after_create :create_parts
 
   def create_parts
-    music_xml_file = open(self.music_xml)
+    music_xml_file = open("public/#{self.music_xml.url}")
     $hash = Hash.from_xml(File.read(music_xml_file))
 
     parts = $hash["score_partwise"]["part_list"]["score_part"]
