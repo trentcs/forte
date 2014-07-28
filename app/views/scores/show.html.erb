@@ -4,6 +4,11 @@
 <div class= 'score_show_composer'>
 <h3 ><%= @score.composer %></h3>
 </div>
-<div class = 'score_show_image'>
-<%= image_tag(@score.original_image) %>
+<div class = 'score_show_image' id="#viewer">
+  <%if @score.original_image.to_s.include?"xml"%>
+    <!-- <p>Yo dawg, put the xml viewer here</p> -->
+  <%else%>
+    <%= image_tag(@score.original_image) %>
+  <%end%>
 </div>
+<div id="viewer"></div>

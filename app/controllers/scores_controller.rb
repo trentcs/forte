@@ -3,6 +3,7 @@ class ScoresController < ApplicationController
     @score = Score.new
   end
 
+
   def create
     @score = Score.new(score_params)
     @score.user_id = current_user.id
@@ -15,6 +16,7 @@ class ScoresController < ApplicationController
   end
 
   def show
+    gon.scores = Score.find(params[:id])
     @score = Score.find(params[:id])
   end
 

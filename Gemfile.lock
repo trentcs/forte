@@ -105,6 +105,11 @@ GEM
       multi_json (~> 1.0)
       net-http-persistent (>= 2.7)
       net-http-pipeline
+    gon (5.1.2)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.11)
@@ -179,6 +184,7 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    request_store (1.0.7)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec-core (2.14.8)
@@ -265,6 +271,7 @@ DEPENDENCIES
   faker
   figaro
   fog
+  gon
   image_suckr
   jbuilder (~> 2.0)
   jquery-rails
