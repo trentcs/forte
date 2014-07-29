@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Score do
   before do
-    @score = Score.create(user_id: 1, title: "wario's fat", composer: "Andy Principe", music_xml: File.open(File.expand_path("spec/test_scores/wario.xml")))
+    @score = Score.new(user_id: 1, title: "wario's fat", composer: "Andy Principe", music_xml: File.open(File.expand_path("spec/test_scores/wario.xml")))
   end
 
   it "should return the score ID for the uploader" do
