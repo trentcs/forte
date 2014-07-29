@@ -274,7 +274,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   byebug
-  capybara (~> 2.2.1)
+  capybara
   carrierwave
   coffee-rails (~> 4.0.0)
   coveralls

@@ -11,7 +11,6 @@ gem 'monban'
 gem 'monban-generators'
 
  gem 'rspec-rails', '~> 2.14.1'
- gem 'capybara', '~> 2.2.1'
  gem 'database_cleaner', '~> 1.2.0'
  gem 'shoulda-matchers'
 
@@ -52,7 +51,7 @@ gem 'rails_12factor', group: :production
 gem 'coveralls', require: false
 gem 'travis'
 gem 'pry'
-# gem 'capybara'
+gem 'capybara'
 gem 'launchy'
 
 

@@ -8,10 +8,11 @@
 <div class= 'analyze_link'>
   <a href="/scores/<%= @score.id %>/analytics">Analyze!</a>
 </div>
+<% if current_user.id == @score.user_id %>
 <div class= 'score_delete'>
-  <%= link_to "Delete", delete_path(@score), method: :delete %>
+  <%= link_to "Delete", delete_path(@score), :method => :post %>
 </div>
-
+<% end %>
 
 <div class = 'score_show_image' id="#viewer">
   <%if @score.music_xml.to_s.include?"xml"%>
