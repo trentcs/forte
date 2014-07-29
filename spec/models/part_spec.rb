@@ -1,20 +1,18 @@
 require 'spec_helper'
 
 describe Part do
-  before do
-    @part1 = Part.new(score_id: 1, instrument_name: "violin", part_number: 1)
-    @part2 = Part.new(score_id: 2, instrument_name: "viola", part_number: 2) 
-  end
+  let (:part1) {Part.new(score_id: 1, instrument_name: "violin", part_number: 1)}
+  let (:part2) {Part.new(score_id: 2, instrument_name: "viola", part_number: 2)}
 
   it "should return the part number for score 1" do
-    expect(@part1.part_number).to eq 1
+    expect(part1.part_number).to eq 1
   end
 
   it "should return the part number for score 2" do
-    expect(@part2.part_number).to eq 2
+    expect(part2.part_number).to eq 2
   end
 
-  subject { @part1 }
+  subject { part1 }
 
   it { should respond_to(:score_id) }
   it { should respond_to(:instrument_name) }
