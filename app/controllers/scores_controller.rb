@@ -31,8 +31,7 @@ class ScoresController < ApplicationController
 
   def analyze
     require_login
-    gon.data1 = ['data1', 30, 200, 100, 400, 150, 250]
-    gon.data2 = ['data2', 50, 20, 10, 40, 15, 25]
+    gon.data1 = Score.find(params[:id]).get_range
   end
 
   def search

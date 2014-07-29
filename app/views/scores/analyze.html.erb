@@ -5,16 +5,16 @@ var chart = c3.generate({
         bindto: "#note_count",
         data: {
           columns: [
-            gon.data1,
-            gon.data2
+            gon.data1
+            // gon.data2
           ],
           axes: {
-            data1: 'y',
-            data2: 'y2',
+            data1: 'y'
+            // data2: 'y2',
           },
           types: {
-            data1: "line",
-            data2: "bar"
+            data1: "line"
+            // data2: "bar"
           }
         },
         axis: {
