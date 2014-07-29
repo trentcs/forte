@@ -35,4 +35,6 @@ build/
 
 # Ignore application configuration
 /config/application.yml
-/log
+/log/development.log
+/log/production.log
+/log/test.log

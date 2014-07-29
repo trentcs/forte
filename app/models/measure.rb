@@ -67,7 +67,6 @@ class Measure < ActiveRecord::Base
   end
 
   def create_notes
-
     if $hash["score_partwise"]["part"].is_a?(Hash)
       notes = $hash["score_partwise"]["part"]["measure"][self.number - 1]["note"]
     else
@@ -88,7 +87,6 @@ class Measure < ActiveRecord::Base
           sci_notation = nil
           isrest = true
         end
-
         self.notes << Note.create(rest: isrest, duration: note["duration"].to_i, voice: note["voice"].to_i, note_type: note["type"], stem: note["stem"], chord: note["chord"]!= nil, alter: alter, sci_notation: sci_notation)
       end
     end
