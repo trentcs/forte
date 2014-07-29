@@ -1,23 +1,21 @@
 require 'spec_helper'
 
 describe Measure do
-  before do
-    @measure = Measure.new(number: 23, divisions: 12, part_id: 2)
-  end
+  let (:measure) {Measure.new(number: 23, divisions: 12, part_id: 2)}
 
   it "should return the measure number for the measure object" do
-    expect(@measure.number).to eq 23
+    expect(measure.number).to eq 23
   end
 
   it "should return the number of division for the measure object" do
-    expect(@measure.divisions).to eq 12
+    expect(measure.divisions).to eq 12
   end
 
   it "should return the measure part_id for the measure object" do
-    expect(@measure.part_id).to eq 2
+    expect(measure.part_id).to eq 2
   end
 
-  subject { @measure }
+  subject { measure }
 
   it { should respond_to(:number) }
   it { should respond_to(:divisions) }

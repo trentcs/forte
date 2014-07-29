@@ -1,23 +1,21 @@
 require 'spec_helper'
 
 describe Clef do
-  before do
-    @clef = Clef.new(sign: "G", line: 2, measure_id: 2)
-  end
+  let (:clef) { Clef.new(sign: "G", line: 2, measure_id: 2) }
 
   it "should return the sign for the clef" do
-    expect(@clef.sign).to eq "G"
+    expect(clef.sign).to eq "G"
   end
 
   it "should return the line for the clef" do
-    expect(@clef.line).to eq 2
+    expect(clef.line).to eq 2
   end
 
   it "should return the measure_id for the clef" do
-    expect(@clef.measure_id).to eq 2
+    expect(clef.measure_id).to eq 2
   end
 
-  subject { @clef }
+  subject { clef }
 
   it { should respond_to(:sign) }
   it { should respond_to(:line) }

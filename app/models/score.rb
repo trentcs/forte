@@ -7,6 +7,8 @@ class Score < ActiveRecord::Base
   has_many :measures, through: :parts
   has_many :notes, through: :measures
 
+  validates :title, :score, :user_id, presence: :true
+
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
 
