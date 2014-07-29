@@ -26,8 +26,8 @@ class ScoresController < ApplicationController
   end
 
   def analyze
-    require_login
-    gon.pitch_range_data = Score.get_ranges
+    # require_login
+    # gon.data1 = Score.get_ranges
     # gon.data1 = Score.find(params[:id]).get_range
   end
 
