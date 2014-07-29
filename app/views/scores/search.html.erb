@@ -10,7 +10,7 @@
 <ul>
   <% @results.each do |score| %>
 
-  <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= score.created_at %></span> </li>
+  <li><span class = 'score_title'><%= link_to "#{score.title}", score_path(score) %></span><span class = 'composer'><%= link_to "#{score.composer}", score_path(score) %></span><span class = 'thumbnail'><%= score.created_at.in_time_zone("Central Time (US & Canada)").strftime("%b %d, %Y, at %l:%M %p") %></span> </li>
 
   <% end %>
 </ul>
