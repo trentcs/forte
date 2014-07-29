@@ -239,6 +239,7 @@ GEM
     thread_safe (0.3.4)
     tilt (1.4.1)
     tins (1.3.0)
+    titleize (1.3.0)
     travis (1.6.17)
       addressable (~> 2.3)
       backports
@@ -299,6 +300,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   shoulda-matchers
   spring
+  titleize
   travis
   turbolinks
   uglifier (>= 1.3.0)

@@ -16,7 +16,8 @@ gem 'monban-generators'
 
 #use gon for passing variables
 gem 'gon'
-
+#string case control
+gem 'titleize'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

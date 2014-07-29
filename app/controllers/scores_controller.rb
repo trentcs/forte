@@ -3,13 +3,10 @@ class ScoresController < ApplicationController
     @scores = Score.all
   end
 
-
-
   def new
     require_login
     @score = Score.new
   end
-
 
   def create
     require_login
@@ -20,7 +17,6 @@ class ScoresController < ApplicationController
     else
       render :new
     end
-
   end
 
   def show
@@ -36,10 +32,9 @@ class ScoresController < ApplicationController
   end
 
   def search
-
     @results = Score.search(params[:search])
-    redirect_to score_path(@results[0]) if @results.length == 1
 
+    redirect_to score_path(@results[0]) if @results.length == 1
   end
 
   def destroy
