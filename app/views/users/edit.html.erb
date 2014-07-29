@@ -1,5 +1,5 @@
 <div class="user_edit">
-<%= form_for @user, :html=>{:id => "editform", :name => "form"} do |form| %>
+<%= form_for @user do |form| %>
   <div class="edit_user_field">
     <%= form.label :first_name %>
     <%= form.text_field :first_name, class: 'edit_field' %>
