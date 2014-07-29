@@ -5,14 +5,6 @@ describe User do
     @user = User.new(first_name: "Andy", last_name: "Principe", email: "andyprincipe@forte.com", password_digest: "123456", user_image_url: "http://images.huffingtonpost.com/2013-08-09-TheDogGunsMoney-TheDogJohnGunsMoney600.jpg")
   end
 
-  it "should return the first_name of the user" do
-    expect(@user.first_name).to eq("Andy")
-  end
-
-  it "should return the last_name of the user" do
-    expect(@user.last_name).to eq("Principe")
-  end
-
   subject { @user }
 
   it { should respond_to(:first_name) }
@@ -30,4 +22,11 @@ describe User do
   
   it { should have_many(:scores) }
 
+  it "should return the first_name of the user" do
+    expect(@user.first_name).to eq("Andy")
+  end
+
+  it "should return the last_name of the user" do
+    expect(@user.last_name).to eq("Principe")
+  end
 end
