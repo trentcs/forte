@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Part do
   before do
-    @part1 = Part.create(score_id: 1, instrument_name: "violin", part_number: 1)
-    @part2 = Part.create(score_id: 2, instrument_name: "viola", part_number: 2) 
+    @part1 = Part.new(score_id: 1, instrument_name: "violin", part_number: 1)
+    @part2 = Part.new(score_id: 2, instrument_name: "viola", part_number: 2) 
   end
 
   it "should return the part number for score 1" do

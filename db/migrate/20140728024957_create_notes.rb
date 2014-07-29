@@ -6,7 +6,7 @@ class CreateNotes < ActiveRecord::Migration
       t.string :note_type
       t.integer :stem
       t.boolean :chord
-      t.string :voice
+      t.integer :voice
       t.integer :alter
       t.string :sci_notation
       t.integer :measure_id

@@ -5,6 +5,8 @@ class Measure < ActiveRecord::Base
   has_one :measure_time
   has_many :notes
 
+  validates :number, :divisions, :part_id, presence: :true
+
   after_create :create_key, :create_clef, :create_time, :create_notes
 
 
