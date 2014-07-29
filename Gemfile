@@ -52,7 +52,7 @@ gem 'rails_12factor', group: :production
 gem 'coveralls', require: false
 gem 'travis'
 gem 'pry'
-# gem 'capybara'
+gem 'capybara'
 gem 'launchy'
 
 
