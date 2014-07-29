@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: [:new, :create, :edi, :update]
 
   def new
     @user = User.new
@@ -19,12 +19,13 @@ class UsersController < ApplicationController
 
   def show
     require_login
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
   end
 
   def edit
     require_login
-    @user = User.find(params[:id])
+
+    @user = User.find(current_user.id)
   end
 
   def update
@@ -34,7 +35,7 @@ class UsersController < ApplicationController
     @errors = []
 
     if @user.valid?
-      render json: {redirect: user_path(@user)}
+      redirect_to user_path(@user)
     else
       render json: {errors: @user.errors.full_messages}, status: 422
     end
@@ -45,5 +46,10 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :user_image_url)
   end
+
+  def session_params
+     params.require(:session).permit(:email_or_username, :password)
+  end
+
 end
 

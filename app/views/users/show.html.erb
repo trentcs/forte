@@ -4,6 +4,7 @@
   <h2><%=@user.first_name%> <%=@user.last_name%></h2>
   </div>
 </div>
+
 <% if @user.user_image_url.file %>
   <%= image_tag(@user.user_image_url, class: 'profile_picture') %>
 <% else %>
@@ -13,6 +14,7 @@
 <div id='edit_link'>
   <%= link_to "Edit Profile", edit_user_path %>
 </div>
+
 <div class='my_scores'>
   <h3>My Scores</h3>
 <div class = 'add_score'>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PitchesAndRows</title>
+  <title>Forte</title>
   <%= include_gon %>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -12,6 +12,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded' rel='stylesheet' type='text/css'>
   <%= include_gon %>
@@ -19,7 +20,7 @@
 </head>
 <body>
   <div id = "title">
-    <h1><%= link_to 'Collard Greenz', root_path %></h1>
+    <h1><%= link_to 'Forte', root_path %></h1>
   </div>
   <div id = "login_buttons">
   <% if signed_in? %>
