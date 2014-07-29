@@ -165,3 +165,18 @@ body {
   text-align: right;
 }
 
+.score_delete form {
+  margin-top: -5px;
+}
+
+.deletebutton  {
+    font-family: 'Roboto', sans-serif;
+    background:none;
+     border:none; 
+     padding:0;
+     text-decoration: underline;
+     cursor: pointer;
+     color: blue;
+     font-size: 1em;
+}
+
