@@ -145,4 +145,23 @@ body {
   margin-top: 2em;
 }
 
+#viewer {
+  width: 70%;
+  margin-left: 15%;
+}
+.analyze_link{
+  margin-left: 10%;
+  display: inline-block;
+  float: left;
+  width: 40%;
+
+}
+
+.score_delete {
+  display: inline-block;
+  float: right;
+  width: 40%;
+  margin-right: 10%;
+  text-align: right;
+}
 
