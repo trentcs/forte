@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20140728024957) do
     t.string   "note_type"
     t.integer  "stem"
     t.boolean  "chord"
-    t.string   "voice"
+    t.integer  "voice"
     t.integer  "alter"
     t.string   "sci_notation"
     t.integer  "measure_id"
