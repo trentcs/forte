@@ -2,6 +2,9 @@ class Part < ActiveRecord::Base
   belongs_to :score
   has_many :measures
   has_many :notes, through: :measures
+
+  validates :score_id, :instrument_name, :part_number, presence: :true
+
   after_create :create_measures
 
 

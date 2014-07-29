@@ -10,6 +10,11 @@ gem 'monban'
 
 gem 'monban-generators'
 
+ gem 'rspec-rails', '~> 2.14.1'
+ gem 'capybara', '~> 2.2.1'
+ gem 'database_cleaner', '~> 1.2.0'
+ gem 'shoulda-matchers'
+
 #use gon for passing variables
 gem 'gon'
 
@@ -19,7 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-gem "rspec-rails", "~> 2.14.0"
+# gem "rspec-rails", "~> 2.14.0"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -47,8 +52,9 @@ gem 'rails_12factor', group: :production
 gem 'coveralls', require: false
 gem 'travis'
 gem 'pry'
-gem 'capybara'
+# gem 'capybara'
 gem 'launchy'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -62,4 +68,7 @@ gem 'launchy'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+
+end
 
