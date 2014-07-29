@@ -7,7 +7,10 @@ class Score < ActiveRecord::Base
   has_many :measures, through: :parts
   has_many :notes, through: :measures
 
-  validates :title, :score, :user_id, presence: :true
+  validates :title, presence: true
+  validates :user, presence: true
+  validates :composer, presence: true
+
 
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
@@ -21,8 +24,7 @@ class Score < ActiveRecord::Base
 
 
   def create_parts
-    music_xml_file = open("public/#{self.music_xml.url}")
-    $hash = Hash.from_xml(File.read(music_xml_file))
+    $hash = Hash.from_xml(music_xml.file.read)
 
     parts = $hash["score_partwise"]["part_list"]["score_part"]
     parts = [parts] if parts.is_a?(Hash)
