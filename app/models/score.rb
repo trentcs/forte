@@ -7,7 +7,7 @@ class Score < ActiveRecord::Base
   has_many :measures, through: :parts
   has_many :notes, through: :measures
 
-  validates :title, :score, :user_id, presence: :true
+  validates :title, :user_id, presence: :true
 
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
@@ -56,6 +56,16 @@ class Score < ActiveRecord::Base
     sci_notation_array = self.notes.map{|note| note.sci_notation}.compact.map{|sci_notation| sci_notation.reverse.first.to_i}.sort
     range = sci_notation_array.last - sci_notation_array.first
     [self.title, range]
+  end
+
+  def get_frequencies
+    part_frequencies = []
+    self.parts.each do |part|
+      sci_notations = part.notes.map{|note| note.sci_notation}.compact.map{|note| note.downcase}
+      part_frequencies << [part.instrument_name] +sci_notations.map{|note| NoteFrequencies.frequency_from_name(note)}
+
+    end
+    part_frequencies
   end
 
   def self.get_ranges
