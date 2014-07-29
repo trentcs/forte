@@ -13671,3 +13671,806 @@ Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 13:44:48 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 13:44:48 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 13:48:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:23 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:23 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:23 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:23 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:23 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:24 -0500
+
+
+Started GET "/scores/new" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+Processing by ScoresController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered scores/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:25 -0500
+
+
+Started POST "/scores" for 127.0.0.1 at 2014-07-29 13:48:56 -0500
+Processing by ScoresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8tFeU4rLE/MT2fzJ/dqfmV5tU6EmvhvGUaCSKGzaWqs=", "score"=>{"title"=>"zelda", "composer"=>"zelda", "music_xml"=>#<ActionDispatch::Http::UploadedFile:0x007fd5a04569d8 @tempfile=#<Tempfile:/var/folders/nw/4ll9x4lx5gd77gsr_fwhnbfh0000gn/T/RackMultipart20140729-30208-ei4y13>, @original_filename="zelda.xml", @content_type="text/xml", @headers="Content-Disposition: form-data; name=\"score[music_xml]\"; filename=\"zelda.xml\"\r\nContent-Type: text/xml\r\n">}, "commit"=>"Create Score"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "scores" ("composer", "created_at", "music_xml", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["composer", "zelda"], ["created_at", "2014-07-29 18:48:56.280767"], ["music_xml", "zelda.xml"], ["title", "zelda"], ["updated_at", "2014-07-29 18:48:56.280767"], ["user_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "parts" ("created_at", "instrument_name", "part_number", "score_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.413131"], ["instrument_name", "B Trumpet"], ["part_number", 1], ["score_id", 5], ["updated_at", "2014-07-29 18:48:56.413131"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.414501"], ["divisions", 12], ["number", 1], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.414501"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.415683"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.415683"]]
+  [1m[36mKey Load (0.4ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 853]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 853  [["measure_id", 853], ["updated_at", "2014-07-29 18:48:56.417734"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.419242"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.419242"]]
+  [1m[35mClef Load (0.4ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 853]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 853[0m  [["measure_id", 853], ["updated_at", "2014-07-29 18:48:56.421533"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.423029"], ["updated_at", "2014-07-29 18:48:56.423029"]]
+  [1m[36mMeasureTime Load (0.3ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 853]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 853  [["measure_id", 853], ["updated_at", "2014-07-29 18:48:56.425077"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.440776"], ["divisions", 12], ["number", 2], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.440776"]]
+  [1m[35mMeasure Load (0.3ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 853]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 853]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.443699"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.443699"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 854]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 854  [["measure_id", 854], ["updated_at", "2014-07-29 18:48:56.445261"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 853]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 853]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.447774"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.447774"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 854]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 854[0m  [["measure_id", 854], ["updated_at", "2014-07-29 18:48:56.449282"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 853]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 853]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.451756"], ["updated_at", "2014-07-29 18:48:56.451756"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 854]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 854  [["measure_id", 854], ["updated_at", "2014-07-29 18:48:56.453457"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.466579"], ["divisions", 12], ["number", 3], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.466579"]]
+  [1m[35mMeasure Load (0.2ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 854]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 854]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.469668"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.469668"]]
+  [1m[36mKey Load (0.3ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 855]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 855  [["measure_id", 855], ["updated_at", "2014-07-29 18:48:56.472090"]]
+  [1m[36mMeasure Load (0.2ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 854]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 854]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.475877"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.475877"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 855]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 855[0m  [["measure_id", 855], ["updated_at", "2014-07-29 18:48:56.477561"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 854]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 854]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.480175"], ["updated_at", "2014-07-29 18:48:56.480175"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 855]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 855  [["measure_id", 855], ["updated_at", "2014-07-29 18:48:56.481835"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.588369"], ["divisions", 12], ["number", 4], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.588369"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 855]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 855]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.590733"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.590733"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 856]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 856  [["measure_id", 856], ["updated_at", "2014-07-29 18:48:56.592289"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 855]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 855]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.594725"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.594725"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 856]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 856[0m  [["measure_id", 856], ["updated_at", "2014-07-29 18:48:56.596137"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 855]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 855]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.598404"], ["updated_at", "2014-07-29 18:48:56.598404"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 856]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 856  [["measure_id", 856], ["updated_at", "2014-07-29 18:48:56.599762"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.612821"], ["divisions", 12], ["number", 5], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.612821"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 856]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 856]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.615271"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.615271"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 857]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 857  [["measure_id", 857], ["updated_at", "2014-07-29 18:48:56.616859"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 856]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 856]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.619461"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.619461"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 857]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 857[0m  [["measure_id", 857], ["updated_at", "2014-07-29 18:48:56.621334"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 856]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 856]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.624260"], ["updated_at", "2014-07-29 18:48:56.624260"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 857]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 857  [["measure_id", 857], ["updated_at", "2014-07-29 18:48:56.625964"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.630306"], ["divisions", 12], ["number", 6], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.630306"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 857]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 857]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.632601"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.632601"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 858]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 858  [["measure_id", 858], ["updated_at", "2014-07-29 18:48:56.634125"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 857]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 857]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.636667"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.636667"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 858]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 858[0m  [["measure_id", 858], ["updated_at", "2014-07-29 18:48:56.638413"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 857]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 857]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.641504"], ["updated_at", "2014-07-29 18:48:56.641504"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 858]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 858  [["measure_id", 858], ["updated_at", "2014-07-29 18:48:56.643309"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.647462"], ["divisions", 12], ["number", 7], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.647462"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 858]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 858]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.649762"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.649762"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 859]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 859  [["measure_id", 859], ["updated_at", "2014-07-29 18:48:56.651303"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 858]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 858]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.653985"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.653985"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 859]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 859[0m  [["measure_id", 859], ["updated_at", "2014-07-29 18:48:56.655750"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 858]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 858]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.658372"], ["updated_at", "2014-07-29 18:48:56.658372"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 859]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 859  [["measure_id", 859], ["updated_at", "2014-07-29 18:48:56.659917"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.683960"], ["divisions", 12], ["number", 8], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.683960"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 859]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 859]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.686492"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.686492"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 860]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 860  [["measure_id", 860], ["updated_at", "2014-07-29 18:48:56.688467"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 859]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 859]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.691338"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.691338"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 860]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 860[0m  [["measure_id", 860], ["updated_at", "2014-07-29 18:48:56.693382"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 859]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 859]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.696108"], ["updated_at", "2014-07-29 18:48:56.696108"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 860]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 860  [["measure_id", 860], ["updated_at", "2014-07-29 18:48:56.697624"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.702526"], ["divisions", 12], ["number", 9], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.702526"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 860]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 860]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.705089"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.705089"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 861]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 861  [["measure_id", 861], ["updated_at", "2014-07-29 18:48:56.706804"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 860]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 860]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.709364"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.709364"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 861]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 861[0m  [["measure_id", 861], ["updated_at", "2014-07-29 18:48:56.710863"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 860]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 860]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.713250"], ["updated_at", "2014-07-29 18:48:56.713250"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 861]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 861  [["measure_id", 861], ["updated_at", "2014-07-29 18:48:56.714637"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.737745"], ["divisions", 12], ["number", 10], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.737745"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 861]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 861]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.740278"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.740278"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 862]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 862  [["measure_id", 862], ["updated_at", "2014-07-29 18:48:56.741840"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 861]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 861]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.744631"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.744631"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 862]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 862[0m  [["measure_id", 862], ["updated_at", "2014-07-29 18:48:56.746210"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 861]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 861]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.748635"], ["updated_at", "2014-07-29 18:48:56.748635"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 862]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 862  [["measure_id", 862], ["updated_at", "2014-07-29 18:48:56.750269"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.755450"], ["divisions", 12], ["number", 11], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.755450"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 862]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 862]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.757829"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.757829"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 863]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 863  [["measure_id", 863], ["updated_at", "2014-07-29 18:48:56.759417"]]
+  [1m[36mMeasure Load (0.2ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 862]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 862]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.763031"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.763031"]]
+  [1m[35mClef Load (0.3ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 863]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 863[0m  [["measure_id", 863], ["updated_at", "2014-07-29 18:48:56.765324"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 862]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 862]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.767976"], ["updated_at", "2014-07-29 18:48:56.767976"]]
+  [1m[36mMeasureTime Load (0.3ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 863]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 863  [["measure_id", 863], ["updated_at", "2014-07-29 18:48:56.769882"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.794963"], ["divisions", 12], ["number", 12], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.794963"]]
+  [1m[35mMeasure Load (0.2ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 863]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 863]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.798252"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.798252"]]
+  [1m[36mKey Load (0.3ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 864]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 864  [["measure_id", 864], ["updated_at", "2014-07-29 18:48:56.800572"]]
+  [1m[36mMeasure Load (0.2ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 863]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 863]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.804177"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.804177"]]
+  [1m[35mClef Load (0.3ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 864]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 864[0m  [["measure_id", 864], ["updated_at", "2014-07-29 18:48:56.806429"]]
+  [1m[35mMeasure Load (0.2ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 863]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 863]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.809889"], ["updated_at", "2014-07-29 18:48:56.809889"]]
+  [1m[36mMeasureTime Load (0.3ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 864]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 864  [["measure_id", 864], ["updated_at", "2014-07-29 18:48:56.812138"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.832973"], ["divisions", 12], ["number", 13], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.832973"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 864]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 864]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.835538"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.835538"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 865]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 865  [["measure_id", 865], ["updated_at", "2014-07-29 18:48:56.837127"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 864]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 864]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.839715"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.839715"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 865]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 865[0m  [["measure_id", 865], ["updated_at", "2014-07-29 18:48:56.841337"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 864]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 864]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.843867"], ["updated_at", "2014-07-29 18:48:56.843867"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 865]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 865  [["measure_id", 865], ["updated_at", "2014-07-29 18:48:56.845385"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.865025"], ["divisions", 12], ["number", 14], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.865025"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 865]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 865]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.867470"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.867470"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 866]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 866  [["measure_id", 866], ["updated_at", "2014-07-29 18:48:56.869297"]]
+  [1m[36mMeasure Load (0.2ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 865]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 865]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.873041"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.873041"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 866]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 866[0m  [["measure_id", 866], ["updated_at", "2014-07-29 18:48:56.874785"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 865]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 865]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.877351"], ["updated_at", "2014-07-29 18:48:56.877351"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 866]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 866  [["measure_id", 866], ["updated_at", "2014-07-29 18:48:56.878826"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.958360"], ["divisions", 12], ["number", 15], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.958360"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 866]]
+  [1m[36mKey Load (0.3ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 866]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.961275"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.961275"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 867]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 867  [["measure_id", 867], ["updated_at", "2014-07-29 18:48:56.962885"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 866]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 866]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.965420"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.965420"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 867]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 867[0m  [["measure_id", 867], ["updated_at", "2014-07-29 18:48:56.966927"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 866]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 866]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.969352"], ["updated_at", "2014-07-29 18:48:56.969352"]]
+  [1m[36mMeasureTime Load (0.4ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 867]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 867  [["measure_id", 867], ["updated_at", "2014-07-29 18:48:56.971606"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.988552"], ["divisions", 12], ["number", 16], ["part_id", 7], ["updated_at", "2014-07-29 18:48:56.988552"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 867]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 867]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:56.991173"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:56.991173"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 868]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 868  [["measure_id", 868], ["updated_at", "2014-07-29 18:48:56.992748"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 867]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 867]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:56.995231"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:56.995231"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 868]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 868[0m  [["measure_id", 868], ["updated_at", "2014-07-29 18:48:56.996795"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 867]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 867]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:56.999581"], ["updated_at", "2014-07-29 18:48:56.999581"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 868]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 868  [["measure_id", 868], ["updated_at", "2014-07-29 18:48:57.001152"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.017006"], ["divisions", 12], ["number", 17], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.017006"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 868]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 868]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.019517"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.019517"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 869]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 869  [["measure_id", 869], ["updated_at", "2014-07-29 18:48:57.021395"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 868]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 868]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.024418"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.024418"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 869]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 869[0m  [["measure_id", 869], ["updated_at", "2014-07-29 18:48:57.026019"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 868]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 868]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.028455"], ["updated_at", "2014-07-29 18:48:57.028455"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 869]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 869  [["measure_id", 869], ["updated_at", "2014-07-29 18:48:57.029852"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.046116"], ["divisions", 12], ["number", 18], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.046116"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 869]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 869]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.048448"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.048448"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 870]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 870  [["measure_id", 870], ["updated_at", "2014-07-29 18:48:57.049994"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 869]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 869]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.052431"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.052431"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 870]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 870[0m  [["measure_id", 870], ["updated_at", "2014-07-29 18:48:57.054003"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 869]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 869]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.056679"], ["updated_at", "2014-07-29 18:48:57.056679"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 870]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 870  [["measure_id", 870], ["updated_at", "2014-07-29 18:48:57.058381"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.090498"], ["divisions", 12], ["number", 19], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.090498"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 870]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 870]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.093163"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.093163"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 871]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 871  [["measure_id", 871], ["updated_at", "2014-07-29 18:48:57.094784"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 870]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 870]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.097334"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.097334"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 871]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 871[0m  [["measure_id", 871], ["updated_at", "2014-07-29 18:48:57.098815"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 870]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 870]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.101389"], ["updated_at", "2014-07-29 18:48:57.101389"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 871]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 871  [["measure_id", 871], ["updated_at", "2014-07-29 18:48:57.102887"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.127862"], ["divisions", 12], ["number", 20], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.127862"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 871]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 871]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.130281"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.130281"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 872]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 872  [["measure_id", 872], ["updated_at", "2014-07-29 18:48:57.131824"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 871]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 871]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.134453"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.134453"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 872]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 872[0m  [["measure_id", 872], ["updated_at", "2014-07-29 18:48:57.136105"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 871]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 871]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.139210"], ["updated_at", "2014-07-29 18:48:57.139210"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 872]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 872  [["measure_id", 872], ["updated_at", "2014-07-29 18:48:57.140905"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.158593"], ["divisions", 12], ["number", 21], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.158593"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 872]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 872]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.160973"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.160973"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 873]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 873  [["measure_id", 873], ["updated_at", "2014-07-29 18:48:57.162530"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 872]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 872]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.165351"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.165351"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 873]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 873[0m  [["measure_id", 873], ["updated_at", "2014-07-29 18:48:57.167035"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 872]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 872]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.169551"], ["updated_at", "2014-07-29 18:48:57.169551"]]
+  [1m[36mMeasureTime Load (0.4ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 873]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 873  [["measure_id", 873], ["updated_at", "2014-07-29 18:48:57.171523"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.180363"], ["divisions", 12], ["number", 22], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.180363"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 873]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 873]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.182782"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.182782"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 874]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 874  [["measure_id", 874], ["updated_at", "2014-07-29 18:48:57.184488"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 873]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 873]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.187130"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.187130"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 874]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 874[0m  [["measure_id", 874], ["updated_at", "2014-07-29 18:48:57.189411"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 873]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 873]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.192564"], ["updated_at", "2014-07-29 18:48:57.192564"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 874]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 874  [["measure_id", 874], ["updated_at", "2014-07-29 18:48:57.194148"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.207038"], ["divisions", 12], ["number", 23], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.207038"]]
+  [1m[35mMeasure Load (0.2ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 874]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 874]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.210340"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.210340"]]
+  [1m[36mKey Load (0.3ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 875]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 875  [["measure_id", 875], ["updated_at", "2014-07-29 18:48:57.212469"]]
+  [1m[36mMeasure Load (0.2ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 874]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 874]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.215745"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.215745"]]
+  [1m[35mClef Load (0.3ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 875]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 875[0m  [["measure_id", 875], ["updated_at", "2014-07-29 18:48:57.217954"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 874]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 874]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.220888"], ["updated_at", "2014-07-29 18:48:57.220888"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 875]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 875  [["measure_id", 875], ["updated_at", "2014-07-29 18:48:57.222480"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.230041"], ["divisions", 12], ["number", 24], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.230041"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 875]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 875]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.232360"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.232360"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 876]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 876  [["measure_id", 876], ["updated_at", "2014-07-29 18:48:57.233919"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 875]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 875]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.236531"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.236531"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 876]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 876[0m  [["measure_id", 876], ["updated_at", "2014-07-29 18:48:57.238309"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 875]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 875]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.240799"], ["updated_at", "2014-07-29 18:48:57.240799"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 876]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 876  [["measure_id", 876], ["updated_at", "2014-07-29 18:48:57.242280"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.252469"], ["divisions", 12], ["number", 25], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.252469"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 876]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 876]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.254771"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.254771"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 877]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 877  [["measure_id", 877], ["updated_at", "2014-07-29 18:48:57.256282"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 876]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 876]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.258787"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.258787"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 877]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 877[0m  [["measure_id", 877], ["updated_at", "2014-07-29 18:48:57.260270"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 876]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 876]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.262579"], ["updated_at", "2014-07-29 18:48:57.262579"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 877]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 877  [["measure_id", 877], ["updated_at", "2014-07-29 18:48:57.263975"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.339715"], ["divisions", 12], ["number", 26], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.339715"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 877]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 877]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.341995"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.341995"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 878]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 878  [["measure_id", 878], ["updated_at", "2014-07-29 18:48:57.343422"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 877]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 877]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.345884"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.345884"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 878]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 878[0m  [["measure_id", 878], ["updated_at", "2014-07-29 18:48:57.347261"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 877]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 877]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.349899"], ["updated_at", "2014-07-29 18:48:57.349899"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 878]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 878  [["measure_id", 878], ["updated_at", "2014-07-29 18:48:57.351442"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.361747"], ["divisions", 12], ["number", 27], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.361747"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 878]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 878]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.364069"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.364069"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 879]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 879  [["measure_id", 879], ["updated_at", "2014-07-29 18:48:57.365576"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 878]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 878]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.368152"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.368152"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 879]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 879[0m  [["measure_id", 879], ["updated_at", "2014-07-29 18:48:57.369633"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 878]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 878]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.372123"], ["updated_at", "2014-07-29 18:48:57.372123"]]
+  [1m[36mMeasureTime Load (0.4ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 879]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 879  [["measure_id", 879], ["updated_at", "2014-07-29 18:48:57.374368"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.382867"], ["divisions", 12], ["number", 28], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.382867"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 879]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 879]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.385178"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.385178"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 880]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 880  [["measure_id", 880], ["updated_at", "2014-07-29 18:48:57.386704"]]
+  [1m[36mMeasure Load (0.3ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 879]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 879]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.390450"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.390450"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 880]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 880[0m  [["measure_id", 880], ["updated_at", "2014-07-29 18:48:57.392104"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 879]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 879]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.394669"], ["updated_at", "2014-07-29 18:48:57.394669"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 880]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 880  [["measure_id", 880], ["updated_at", "2014-07-29 18:48:57.396212"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.406403"], ["divisions", 12], ["number", 29], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.406403"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 880]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 880]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.408903"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.408903"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 881]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 881  [["measure_id", 881], ["updated_at", "2014-07-29 18:48:57.410552"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 880]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 880]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.413102"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.413102"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 881]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 881[0m  [["measure_id", 881], ["updated_at", "2014-07-29 18:48:57.414590"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 880]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 880]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.417071"], ["updated_at", "2014-07-29 18:48:57.417071"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 881]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 881  [["measure_id", 881], ["updated_at", "2014-07-29 18:48:57.418528"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.434212"], ["divisions", 12], ["number", 30], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.434212"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 881]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 881]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.436784"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.436784"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 882]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 882  [["measure_id", 882], ["updated_at", "2014-07-29 18:48:57.438413"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 881]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 881]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.441086"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.441086"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 882]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 882[0m  [["measure_id", 882], ["updated_at", "2014-07-29 18:48:57.442691"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 881]]
+  [1m[36mMeasureTime Load (0.1ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 881]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.445212"], ["updated_at", "2014-07-29 18:48:57.445212"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 882]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 882  [["measure_id", 882], ["updated_at", "2014-07-29 18:48:57.446673"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "measures" ("created_at", "divisions", "number", "part_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.477823"], ["divisions", 12], ["number", 31], ["part_id", 7], ["updated_at", "2014-07-29 18:48:57.477823"]]
+  [1m[35mMeasure Load (0.1ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 882]]
+  [1m[36mKey Load (0.1ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 882]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "keys" ("created_at", "fifths", "mode", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-07-29 18:48:57.480493"], ["fifths", 0], ["mode", "major"], ["updated_at", "2014-07-29 18:48:57.480493"]]
+  [1m[36mKey Load (0.2ms)[0m  [1mSELECT  "keys".* FROM "keys"  WHERE "keys"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 883]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "keys" SET "measure_id" = $1, "updated_at" = $2 WHERE "keys"."id" = 883  [["measure_id", 883], ["updated_at", "2014-07-29 18:48:57.482111"]]
+  [1m[36mMeasure Load (0.1ms)[0m  [1mSELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1[0m  [["id", 882]]
+  [1m[35mClef Load (0.1ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 882]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "clefs" ("created_at", "line", "sign", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-07-29 18:48:57.484715"], ["line", 2], ["sign", "G"], ["updated_at", "2014-07-29 18:48:57.484715"]]
+  [1m[35mClef Load (0.2ms)[0m  SELECT  "clefs".* FROM "clefs"  WHERE "clefs"."measure_id" = $1 LIMIT 1  [["measure_id", 883]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "clefs" SET "measure_id" = $1, "updated_at" = $2 WHERE "clefs"."id" = 883[0m  [["measure_id", 883], ["updated_at", "2014-07-29 18:48:57.486238"]]
+  [1m[35mMeasure Load (0.2ms)[0m  SELECT  "measures".* FROM "measures"  WHERE "measures"."id" = $1 LIMIT 1  [["id", 882]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 882]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "measure_times" ("beat_type", "beats", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["beat_type", 4], ["beats", 4], ["created_at", "2014-07-29 18:48:57.489424"], ["updated_at", "2014-07-29 18:48:57.489424"]]
+  [1m[36mMeasureTime Load (0.2ms)[0m  [1mSELECT  "measure_times".* FROM "measure_times"  WHERE "measure_times"."measure_id" = $1 LIMIT 1[0m  [["measure_id", 883]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "measure_times" SET "measure_id" = $1, "updated_at" = $2 WHERE "measure_times"."id" = 883  [["measure_id", 883], ["updated_at", "2014-07-29 18:48:57.491081"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/scores/5
+Completed 302 Found in 2783ms (ActiveRecord: 83.9ms)
+
+
+Started GET "/scores/5" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", "5"]]
+  Rendered scores/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 13:48:59 -0500
+
+
+Started POST "/scores/5" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+Processing by ScoresController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8tFeU4rLE/MT2fzJ/dqfmV5tU6EmvhvGUaCSKGzaWqs=", "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mScore Load (0.2ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "scores" WHERE "scores"."id" = $1  [["id", 5]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 649ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mScore Load (0.2ms)[0m  SELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 13:49:02 -0500

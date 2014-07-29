@@ -10,7 +10,7 @@
 </div>
 <% if current_user.id == @score.user_id %>
 <div class= 'score_delete'>
-  <%= link_to "Delete", delete_path(@score), :method => :delete %>
+  <%= link_to "Delete", delete_path(@score), :method => :post %>
 </div>
 <% end %>
 
