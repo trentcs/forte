@@ -278,12 +278,11 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-<<<<<<< HEAD
+
   byebug
   capybara
-=======
-  capybara (~> 2.2.1)
->>>>>>> d941b1646b6159fe3538ae3bcedc8726e8b83b44
+
+  
   carrierwave
   coffee-rails (~> 4.0.0)
   coveralls
