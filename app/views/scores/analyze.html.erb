@@ -46,22 +46,22 @@ var chart = c3.generate({
         }
       });
 
-      setTimeout(function () {
-        chart.axis.labels({
-          x: 'New X Axis Label',
-          y: 'New Y Axis Label',
-          y2: 'New Y2 Axis Label',
-        });
-      }, 1000);
+      // setTimeout(function () {
+      //   chart.axis.labels({
+      //     x: 'New X Axis Label',
+      //     y: 'New Y Axis Label',
+      //     y2: 'New Y2 Axis Label',
+      //   });
+      // }, 1000);
 
-      setTimeout(function () {
-        chart.load({
-          columns: [
-            ['data1', 100, 300, 600, 200, 400, 500]
-          ]
-        });
-        chart.axis.labels({y: 'New Y Axis Label Again'});
-      }, 2000);
+      // setTimeout(function () {
+      //   chart.load({
+      //     columns: [
+      //       ['data1', 100, 300, 600, 200, 400, 500]
+      //     ]
+      //   });
+      //   chart.axis.labels({y: 'New Y Axis Label Again'});
+      // }, 2000);
 
 
       </script>
