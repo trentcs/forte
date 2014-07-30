@@ -60,19 +60,35 @@ class Score < ActiveRecord::Base
     part_frequencies = []
     self.parts.each do |part|
       sci_notations = part.notes.map{|note| note.sci_notation}.compact.map{|note| note.downcase}
-      part_frequencies << [part.instrument_name] +sci_notations.map{|note| sci_to_freq(note)}
-
+      part_frequencies << ["Part #{part.part_number}: #{part.instrument_name}"] +sci_notations.map{|note| sci_to_freq(note)}
+      part_frequencies << ["Part #{part.part_number}: #{part.instrument_name} x"] + part.notes.map{|note| position_in_score(note, part)} 
     end
     part_frequencies
+  end
+
+  def position_in_score(note, part)
+    position = 0
+    part.notes.each do |current_note|
+      if current_note == note
+        return position
+      else
+        position += current_note.duration
+      end
+    end
+    return nil
   end
 
   def sci_to_freq(sci)
     NoteFrequencies.frequency_from_name(sci)
   end
 
-  def self.get_ranges(user_id)
+  def self.get_ranges(user_id= nil)
     ranges = []
-    Score.where(user_id: user_id).each {|score| ranges << score.get_range}
+    if user_id
+      Score.where(user_id: user_id).each{|score| ranges << score.get_range}
+    else
+      Score.all.each{|score| ranges << score.get_range}
+    end
     ranges
   end
 
