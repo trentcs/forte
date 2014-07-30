@@ -25,6 +25,7 @@ class ScoresController < ApplicationController
     require_login
     gon.scores = Score.find(params[:id])
     @score = Score.find(params[:id])
+    @score_url = gon.scores.music_xml.url
   end
 
   def analyze
