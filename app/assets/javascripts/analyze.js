@@ -41,12 +41,12 @@ $(function() {
 
 		bindto: "#melodic_contour",
 	    data: {
-          xs: {
-              'Part 1: Soprano Recorder': 'Part 1: Soprano Recorder x',
-              'Part 2: Alto Recorder': 'Part 2: Alto Recorder x',
-              'Part 3: Tenor Recorder': 'Part 3: Tenor Recorder x',
-              'Part 4: Bass Recorder': 'Part 4: Bass Recorder x'
-          },
+          // xs: {
+          //     'Part 1: Soprano Recorder': 'Part 1: Soprano Recorder x',
+          //     'Part 2: Alto Recorder': 'Part 2: Alto Recorder x',
+          //     'Part 3: Tenor Recorder': 'Part 3: Tenor Recorder x',
+          //     'Part 4: Bass Recorder': 'Part 4: Bass Recorder x'
+          // },
 	        columns: gon.melodic_contour,
 	        type: 'scatter'
 	    },
