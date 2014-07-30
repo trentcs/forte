@@ -51,7 +51,7 @@ class Score < ActiveRecord::Base
   end
 
   def get_range
-    sci_notation_array = self.notes.map{|note| note.sci_notation}.compact.map{|sci_notation| sci_notation.reverse.first.to_i}.sort
+    sci_notation_array = self.notes.map{|note| note.sci_notation}.compact.map{|sci_notation| sci_to_freq(sci_notation.downcase)}.sort
     range = sci_notation_array.last - sci_notation_array.first
     [self.title, range]
   end
@@ -60,15 +60,19 @@ class Score < ActiveRecord::Base
     part_frequencies = []
     self.parts.each do |part|
       sci_notations = part.notes.map{|note| note.sci_notation}.compact.map{|note| note.downcase}
-      part_frequencies << [part.instrument_name] +sci_notations.map{|note| NoteFrequencies.frequency_from_name(note)}
+      part_frequencies << [part.instrument_name] +sci_notations.map{|note| sci_to_freq(note)}
 
     end
     part_frequencies
   end
 
-  def self.get_ranges
+  def sci_to_freq(sci)
+    NoteFrequencies.frequency_from_name(sci)
+  end
+
+  def self.get_ranges(user_id)
     ranges = []
-    Score.all.each {|score| ranges << score.get_range}
+    Score.where(user_id: user_id).each {|score| ranges << score.get_range}
     ranges
   end
 

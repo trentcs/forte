@@ -28,7 +28,7 @@ class ScoresController < ApplicationController
   def analyze
     require_login
     @score = Score.find(params[:id])
-    gon.pitch_range_data = Score.get_ranges
+    gon.pitch_range_data = Score.get_ranges(@score.user_id)
     gon.melodic_contour = @score.get_frequencies
     gon.duration_counts = @score.get_duration_counts
     # gon.data1 = Score.find(params[:id]).get_range

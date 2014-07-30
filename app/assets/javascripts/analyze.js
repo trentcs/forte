@@ -18,7 +18,7 @@ $(function() {
 	    
 	          y: {
 	            label: {
-	              text: 'Range (octaves)',
+	              text: 'Range (frequency)',
 	              position: 'outer-middle'
 	            }
 	          },
