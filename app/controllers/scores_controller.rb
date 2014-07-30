@@ -3,13 +3,10 @@ class ScoresController < ApplicationController
     @scores = Score.all
   end
 
-
-
   def new
     require_login
     @score = Score.new
   end
-
 
   def create
     require_login
@@ -20,7 +17,6 @@ class ScoresController < ApplicationController
     else
       render :new
     end
-
   end
 
   def show
@@ -31,15 +27,16 @@ class ScoresController < ApplicationController
 
   def analyze
     require_login
-    gon.data1 = Score.get_ranges
+    @score = Score.find(params[:id])
+    gon.pitch_range_data = Score.get_ranges
+    gon.melodic_contour = @score.get_frequencies
     # gon.data1 = Score.find(params[:id]).get_range
   end
 
   def search
-
     @results = Score.search(params[:search])
-    redirect_to score_path(@results[0]) if @results.length == 1
 
+    redirect_to score_path(@results[0]) if @results.length == 1
   end
 
   def destroy
