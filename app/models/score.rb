@@ -73,6 +73,12 @@ class Score < ActiveRecord::Base
     ranges
   end
 
+  def get_duration_counts
+    duration_counts = Hash.new(0)
+    self.notes.each {|note| duration_counts[note.note_type] += 1 if note.note_type.nil? == false}
+    duration_counts.to_a
+  end
+
   # def sort_scientific_notation
   #   pitches = []
   #   self.notes.each {|note| pitches <<  note.sci_notation }
