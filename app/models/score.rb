@@ -11,17 +11,13 @@ class Score < ActiveRecord::Base
   validates :user, presence: true
   validates :composer, presence: true
 
-
   mount_uploader :music_xml, OriginalScorePhotoUploader
 
+  after_create :create_parts
 
   def self.search(search)
     @scores = where('title LIKE ? OR composer LIKE ? ', "%#{search}%", "%#{search}%")
   end
-
-
-  after_create :create_parts
-
 
   def create_parts
     $hash = Hash.from_xml(music_xml.file.read)
