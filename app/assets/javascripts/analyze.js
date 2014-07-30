@@ -1,5 +1,6 @@
 $(function() {
 	console.log(gon.melodic_contour);
+	console.log("Hey, wha happen?")
 	var pitchRangeChart = c3.generate({
 	        bindto: "#note_count",
 	        data: {
