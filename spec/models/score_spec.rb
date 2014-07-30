@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Score do
-	let(:music_xml) do
+	let(:music_xml_1) do
 		File.open("spec/test_scores/wario.xml")
 	end
 
@@ -9,7 +9,18 @@ describe Score do
   	score = Score.create!(user_id: 1, 
   							 title: "wario's fat",
   							 composer: "Andy Principe",
-  							 music_xml: music_xml)
+  							 music_xml: music_xml_1)
+  end
+
+ 	let(:music_xml_2) do
+		File.open("spec/test_scores/africa.xml")
+	end
+
+  let(:score2) do
+  	score2 = Score.create!(user_id: 1, 
+  							 title: "Africa",
+  							 composer: "Al Pachino",
+  							 music_xml: music_xml_2)
   end
 
 	# before(:each) do
@@ -85,12 +96,12 @@ describe Score do
 
   it "should return average total notes metric against all scores" do
   	score
-  	expect(Score.avg_total_note_count).to eq(31)
+  	expect(Score.avg_total_note_count).to eq(988.0)
   end
 
   it "should return average notes per a measure metric against all scores" do
   	score
-  	expect(Score.avg_notes_per_measure).to eq(3.88)
+  	expect(Score.avg_notes_per_measure).to eq(4.42)
   end
 
   it "should return the range of the score" do
@@ -99,7 +110,7 @@ describe Score do
 
   it "should return the range of all scores" do
   	score
-  	expect(Score.get_ranges).to eq([["wario's fat", 1]])
+  	expect(Score.get_ranges).to eq([["test", 4], ["wario's fat", 1]])
   end
 
 end
