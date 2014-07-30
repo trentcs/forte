@@ -8317,3 +8317,1389 @@ Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:12:05 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:12:05 -0500
+
+
+Started GET "/scores/12/analytics" for 127.0.0.1 at 2014-07-29 19:14:25 -0500
+Processing by ScoresController#analyze as HTML
+  Parameters: {"id"=>"12"}
+  Rendered scores/analyze.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:14:26 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mScore Load (0.3ms)[0m  SELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:35 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:36 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:36 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:15:36 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 19:18:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:38 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.9ms)
+  Rendered partials/_signup_form.html.erb (0.8ms)
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:39 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 19:18:55 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.5ms)
+  Rendered partials/_signup_form.html.erb (0.5ms)
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 83ms (Views: 82.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/assets/notes.jpg" for 127.0.0.1 at 2014-07-29 19:18:56 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.5ms)
+  Rendered partials/_signup_form.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:21:11 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:16 -0500
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 19:23:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mScore Load (0.3ms)[0m  SELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:35 -0500
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5lKrEn5RBjQBj2tQCOAq4ezfjcMojkwrTgJm0u2aW+c="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.6ms)
+  Rendered partials/_signup_form.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:23:37 -0500
+
+
+Started POST "/session" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GEqCAOVeOTFemGf6xvVlNQCbPLKKL5ud6SjTFgXHh3A=", "session"=>{"email"=>"colin@aol.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'colin@aol.com' LIMIT 1[0m
+Completed 200 OK in 74ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mScore Load (0.2ms)[0m  SELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:16 -0500
+
+
+Started GET "/scores/14" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mScore Load (0.6ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", "14"]]
+  Rendered scores/show.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 77ms (Views: 72.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:19 -0500
+
+
+Started GET "/scores/15" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", "15"]]
+  Rendered scores/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:31:27 -0500
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:24 -0500
+
+
+Started GET "/scores" for 127.0.0.1 at 2014-07-29 19:39:27 -0500
+Processing by ScoresController#index as HTML
+  [1m[35mScore Load (0.4ms)[0m  SELECT "scores".* FROM "scores"
+  Rendered scores/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:28 -0500
+
+
+Started GET "/scores/12" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+Processing by ScoresController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4 LIMIT 1
+  [1m[36mScore Load (0.2ms)[0m  [1mSELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", "12"]]
+  Rendered scores/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 77ms (Views: 73.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:39:31 -0500
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GEqCAOVeOTFemGf6xvVlNQCbPLKKL5ud6SjTFgXHh3A="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+Processing by WelcomeController#index as HTML
+  Rendered partials/_login_form.html.erb (0.6ms)
+  Rendered partials/_signup_form.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:46:47 -0500
+
+
+Started POST "/session" for 127.0.0.1 at 2014-07-29 19:56:28 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DBnxMTUbt0suvmi9b4fN1onEwi4ElS3O5C1yKWtJMAI=", "session"=>{"email"=>"trent@aol.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'trent@aol.com' LIMIT 1[0m
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mScore Load (0.2ms)[0m  SELECT "scores".* FROM "scores"  WHERE "scores"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:29 -0500
+
+
+Started GET "/scores" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+Processing by ScoresController#index as HTML
+  [1m[36mScore Load (0.3ms)[0m  [1mSELECT "scores".* FROM "scores"[0m
+  Rendered scores/index.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/c3.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/reveal.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/scores.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/analyze.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/c3.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/jquery-1.4.4.min.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/jquery.reveal.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/scores.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/sticky.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/vexflow-debug.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/xmlviewer.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 19:56:32 -0500
