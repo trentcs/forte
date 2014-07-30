@@ -1,16 +1,12 @@
 $(function() {
-	console.log(gon.melodic_contour);
-	console.log("Hey, wha happen?")
 	var pitchRangeChart = c3.generate({
-	        bindto: "#note_count",
+	        bindto: "#pitch_range",
 	        data: {
 	          columns: 
 	            gon.pitch_range_data
-	            // gon.data2
 	          ,
 	          axes: {
 	            pitch_range_data: 'y'
-	            // data2: 'y2',
 	          },
 	          type: "bar"
 	        },
@@ -18,13 +14,13 @@ $(function() {
 	    
 	          y: {
 	            label: {
-	              text: 'Range (octaves)',
+	              text: 'Range (frequency)',
 	              position: 'outer-middle'
 	            }
 	          },
 	        },
 	        tooltip: {
-	//          enabled: false
+	         show: false
 	        },
 	        zoom: {
 	//          enabled: true
@@ -34,31 +30,44 @@ $(function() {
 	        }
 	      });
 
+  $("#pitch_range").click(function() {
+
+    pitchRangeChart.load({
+        columns: gon.all_pitch_range_data
+    });
+});
+
 	var melodicCountourChart = c3.generate({
 
 		bindto: "#melodic_contour",
 	    data: {
+          xs: {
+              'Part 1: Soprano Recorder': 'Part 1: Soprano Recorder x',
+              'Part 2: Alto Recorder': 'Part 2: Alto Recorder x',
+              'Part 3: Tenor Recorder': 'Part 3: Tenor Recorder x',
+              'Part 4: Bass Recorder': 'Part 4: Bass Recorder x'
+          },
 	        columns: gon.melodic_contour,
-	        type: 'spline'
+	        type: 'scatter'
 	    },
 	    axis: {
 	    	
 	    	x: {
 	    		label: {
-	    			text: 'Measures'
+	    			text: '# Notes'
 	    		}
 	    	},
 
 	    	y: {
 	    		label: {
-	    			text: 'Pitch',
+	    			text: 'Frequency',
 	    			position: 'outer-middle'
 	    		}
 	    	},
 	    }
 	});
 	
-	var chart = c3.generate({
+	var rhythmicDistributionChart = c3.generate({
 		bindto: "#duration_count",
     data: {
         columns: gon.duration_counts,
@@ -73,7 +82,7 @@ $(function() {
 });
 
 // setTimeout(function () {
-//     chart.load({
+//     rhythmicDistributionChart.load({
 //         columns: [
 //             ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
 //             ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
@@ -83,8 +92,8 @@ $(function() {
 // }, 1500);
 
 setTimeout(function () {
-    chart.unload('data1');
-    chart.unload('data2');
+    rhythmicDistributionChart.unload('data1');
+    rhythmicDistributionChart.unload('data2');
 }, 2500);
 
 // var chart = c3.generate({
