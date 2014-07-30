@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'spec_helper'         
 
 describe MeasureTime do
   let (:measure_time) {MeasureTime.new(beats: 4, beat_type: 4, measure_id: 2) }
