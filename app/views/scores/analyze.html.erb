@@ -1,11 +1,21 @@
-<h1>Analysis</h1>
-  <div id='pitch_range'>
+
+<div class = 'charts'>
+  <h1>Analysis</h1>
+  <ul class = 'chart-links'>
+    <li><%= link_to "Pitch Range", '#pitch_range', class:'active' %></li>
+    <li><%= link_to "Melodic Contour", '#melodic_contour' %></li>
+    <li><%= link_to "Duration Count", '#duration_count' %></li>
+  </ul>
+</div>
+  
+  <div class = 'chart', id='pitch_range'>
     <h2>Pitch Range</h2>
   </div>
-  <div id="melodic_contour">
+
+  <div class = 'chart', id="melodic_contour">
     <h2>Melodic Contour</h2>
   </div>
 
-  <div id="duration_count">
+  <div class = 'chart', id="duration_count">
     <h2>Duration Count</h2>
   </div>

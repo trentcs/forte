@@ -11,7 +11,11 @@ $(function() {
 	          type: "bar"
 	        },
 	        axis: {
-	    
+            x: {
+              tick: {
+                format: function(x){return ""}
+              },
+            },    
 	          y: {
 	            label: {
 	              text: 'Range (frequency)',
@@ -36,26 +40,30 @@ $(function() {
         columns: gon.all_pitch_range_data
     });
 });
-
+  console.log(gon.melodic_contour)
+  x_axis_pairs = {}
+  for(i = 0; i < gon.melodic_contour.length; i+=2){
+    x_axis_pairs[gon.melodic_contour[i][0]] = gon.melodic_contour[i+1][0]
+  }
+  console.log(x_axis_pairs)
 	var melodicCountourChart = c3.generate({
-
 		bindto: "#melodic_contour",
 	    data: {
-          xs: {
-              'Part 1: Soprano Recorder': 'Part 1: Soprano Recorder x',
-              'Part 2: Alto Recorder': 'Part 2: Alto Recorder x',
-              'Part 3: Tenor Recorder': 'Part 3: Tenor Recorder x',
-              'Part 4: Bass Recorder': 'Part 4: Bass Recorder x'
-          },
+
+          xs: x_axis_pairs,
 	        columns: gon.melodic_contour,
-	        type: 'scatter'
+	        type: 'spline'
 	    },
+      point: {
+        show: false
+      },
 	    axis: {
 	    	
 	    	x: {
-	    		label: {
-	    			text: '# Notes'
-	    		}
+	    		tick: {
+              count: 8,
+              format: function(x){return ""}
+            },
 	    	},
 
 	    	y: {
