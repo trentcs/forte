@@ -1,4 +1,6 @@
 class ScoresController < ApplicationController
+  attr_accessor :score_params
+
   def index
     @scores = Score.all
   end

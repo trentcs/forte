@@ -11,6 +11,24 @@
 <div class= 'analyze_link'>
   <a href="/scores/<%= @score.id %>/analytics">Analyze!</a>
 </div>
+<div class= 'player'>
+	<object classid="CLSID:07000E2B-6AAD-497D-8E5B-5976560AD429" border="0" height="30" width="32"><param name="type" value="application/x-myriad-music">
+	<param name="pluginspage" value="/Users/axprin/Desktop/wario.xml">
+	<param name="src" value="../../resources/tunes/plugsample.mus">
+	<param name="menubkcolor2" value="FFFFFF">
+	<param name="menubkcolor1" value="FFFFFF">
+	<param name="print" value="off">
+	<div style="background-color:white; width:32; height:14; position:absolute"></div>
+	<param name="transp" value="off">
+	<param name="save" value="off">
+	<param name="tempo" value="off">
+	<param name="docinfo" value="off">
+	<param name="title" value="off">
+	<param name="height" value="30">
+	<param name="width" value="312">
+	<embed pluginspage="http://www.myriad-online.com/cgi-bin/mmplug.pl" type="application/x-myriad-music" menubkcolor2="FFDDFF" menubkcolor1="FFFFD0" print="off" transp="off" save="off" tempo="off" docinfo="off" title="off" src="/Users/axprin/Desktop/wario.xml" height="30" width="32" menubkcolor1="000000"
+	></object>
+</div>
 <% if current_user.id == @score.user_id %>
 <div class= 'score_delete'>
   <%= button_to "Delete", @score, :method => :delete, class: 'deletebutton' %> 
