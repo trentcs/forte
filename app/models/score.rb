@@ -61,7 +61,7 @@ class Score < ActiveRecord::Base
     self.parts.each do |part|
       sci_notations = part.notes.map{|note| note.sci_notation}.compact.map{|note| note.downcase}
       part_frequencies << ["Part #{part.part_number}: #{part.instrument_name}"] +sci_notations.map{|note| sci_to_freq(note)}
-      part_frequencies << ["Part #{part.part_number}: #{part.instrument_name} x"] + part.notes.map{|note| position_in_score(note, part)} 
+      part_frequencies << ["Part #{part.part_number}: #{part.instrument_name} x"] + part.notes.map{|note| position_in_score(note, part)}
     end
     part_frequencies
   end
@@ -92,6 +92,12 @@ class Score < ActiveRecord::Base
     ranges
   end
 
+  def get_duration_counts
+    duration_counts = Hash.new(0)
+    self.notes.each {|note| duration_counts[note.note_type] += 1 if note.note_type.nil? == false}
+    duration_counts.to_a
+  end
+
   # def sort_scientific_notation
   #   pitches = []
   #   self.notes.each {|note| pitches <<  note.sci_notation }
@@ -101,4 +107,3 @@ class Score < ActiveRecord::Base
   # end
 
 end
-
