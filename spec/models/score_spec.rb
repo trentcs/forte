@@ -42,7 +42,7 @@ describe Score do
   it { should respond_to(:composer) }
   it { should respond_to(:music_xml) }
 
-  it { should validate_presence_of(:user) }
+  # it { should validate_presence_of(:user) }
   it { should validate_presence_of(:title) }
   it { should validate_presence_of(:composer) }
 
