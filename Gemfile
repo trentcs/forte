@@ -10,10 +10,6 @@ gem 'monban'
 
 gem 'monban-generators'
 
- gem 'rspec-rails', '~> 2.14.1'
- gem 'database_cleaner', '~> 1.2.0'
- gem 'shoulda-matchers'
-
 #use gon for passing variables
 gem 'gon'
 gem 'note_frequencies'
@@ -31,7 +27,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
 #css normalize
 gem 'activesupport'
 # for aws cloud storage
@@ -43,20 +38,25 @@ gem 'carrierwave'
 gem 'figaro'
 gem 'faker'
 gem 'image_suckr'
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+group :development do
+	gem 'spring'
+end
 
-gem 'rails_12factor', group: :production
-
-gem 'coveralls', require: false
-gem 'travis'
-gem 'pry'
-gem 'capybara'
-gem 'launchy'
-
-
-gem 'byebug'
-
+group :production do
+	gem 'rails_12factor' 
+	gem 'coveralls', require: false
+	gem 'travis'
+	gem 'pry'
+	gem 'capybara'
+	gem 'launchy'
+	gem 'byebug'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -72,6 +72,8 @@ gem 'byebug'
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-
+ gem 'rspec-rails', '~> 2.14.1'
+ gem 'database_cleaner', '~> 1.2.0'
+ gem 'shoulda-matchers'
 end
 

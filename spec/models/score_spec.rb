@@ -96,21 +96,21 @@ describe Score do
 
   it "should return average total notes metric against all scores" do
   	score
-  	expect(Score.avg_total_note_count).to eq(988.0)
+  	expect(Score.avg_total_note_count).to eq(31.0)
   end
 
   it "should return average notes per a measure metric against all scores" do
   	score
-  	expect(Score.avg_notes_per_measure).to eq(4.42)
+  	expect(Score.avg_notes_per_measure).to eq(3.88)
   end
 
   it "should return the range of the score" do
-  	expect(score.get_range).to eq(["wario's fat", 1])
+  	expect(score.get_range).to eq(["wario's fat", 172.0])
   end
 
   it "should return the range of all scores" do
   	score
-  	expect(Score.get_ranges).to eq([["test", 4], ["wario's fat", 1]])
+  	expect(Score.get_ranges).to eq([["wario's fat", 172.0]])
   end
 
 end
