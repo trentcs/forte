@@ -113,4 +113,21 @@ describe Score do
   	expect(Score.get_ranges).to eq([["wario's fat", 172.0]])
   end
 
+  it "should return the frequencies from the score" do
+    expect(score.get_frequencies).to eq([["Part 1: Violin", 293.66, 293.66, 293.66, 392.0, 293.66, 293.66, 293.66, 220.0, 293.66, 293.66, 293.66, 392.0, 329.63, 293.66, 293.66, 293.66, 220.0], ["Part 1: Violin x", 0, 2, 4, 8, 10, 12, 16, 18, 20, 24, 28, 32, 34, 36, 40, 44, 48, 52, 55, 56], ["Part 2: Violin", 293.66, 329.63, 293.66, 329.63, 293.66, 329.63, 293.66, 220.0], ["Part 2: Violin x", 0, 8, 12, 16, 24, 28, 32, 40, 44, 48, 56]])
+  end
+
+  it "should return the position of the note in a score" do
+    note = score.notes.first
+    part = score.parts.first
+    expect(score.position_in_score(note, part)).to eq(0)
+  end
+
+  it "should return the duration count for a note in the score" do
+    expect(score.get_duration_counts).to eq([["eighth", 9], ["quarter", 15], ["16th", 1], ["half", 6]])
+  end
+
+  it "should return the scientific notation based on a frequency" do
+    expect(score.sci_to_freq("c4")).to eq(261.63)
+  end
 end
