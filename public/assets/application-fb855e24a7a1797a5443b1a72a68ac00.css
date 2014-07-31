@@ -1,0 +1,889 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+.charts {
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.charts h1 {
+  font-size: 2em;
+
+}
+.chart {
+  display: none;
+  margin-top: 45px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.link_button {
+    background-color:#400E75;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+
+.active {
+  background-color: orange;
+}
+
+.chart-links {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.chart-links li {
+  display: inline-block;
+}
+/*-- Chart --*/
+
+
+.c3 svg {
+  font: 10px sans-serif;
+}
+.c3 path, .c3 line {
+  fill: none;
+  stroke: #000;
+}
+.c3 text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.c3-legend-item-tile,
+.c3-xgrid-focus,
+.c3-ygrid,
+.c3-event-rect,
+.c3-bars path {
+  shape-rendering: crispEdges;
+}
+
+.c3-chart-arc path {
+  stroke: #fff;
+
+}
+.c3-chart-arc text {
+  fill: #fff;
+  font-size: 13px;
+}
+
+/*-- Axis --*/
+
+.c3-axis-x .tick {
+}
+.c3-axis-x-label {
+}
+
+.c3-axis-y .tick {
+}
+.c3-axis-y-label {
+}
+
+.c3-axis-y2 .tick {
+}
+.c3-axis-y2-label {
+}
+
+/*-- Grid --*/
+
+.c3-grid line {
+  stroke: #aaa;
+}
+.c3-grid text {
+  fill: #aaa;
+}
+.c3-xgrid, .c3-ygrid {
+  stroke-dasharray: 3 3;
+}
+.c3-xgrid-focus {
+}
+
+/*-- Text on Chart --*/
+
+.c3-text {
+}
+
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em;
+}
+
+/*-- Line --*/
+
+.c3-line {
+  stroke-width: 1px;
+}
+/*-- Point --*/
+
+.c3-circle._expanded_ {
+  stroke-width: 1px;
+  stroke: white;
+}
+.c3-selected-circle {
+  fill: white;
+  stroke-width: 2px;
+}
+
+/*-- Bar --*/
+
+.c3-bar {
+  stroke-width: 0;
+}
+.c3-bar._expanded_ {
+  fill-opacity: 0.75;
+}
+
+/*-- Arc --*/
+
+.c3-chart-arcs-title {
+  font-size: 1.3em;
+}
+
+/*-- Focus --*/
+
+.c3-target.c3-focused path.c3-line, .c3-target.c3-focused path.c3-step {
+  stroke-width: 2px;
+}
+
+/*-- Region --*/
+
+.c3-region {
+  fill: steelblue;
+  fill-opacity: .1;
+}
+
+/*-- Brush --*/
+
+.c3-brush .extent {
+  fill-opacity: .1;
+}
+
+/*-- Select - Drag --*/
+
+.c3-dragarea {
+}
+
+/*-- Legend --*/
+
+.c3-legend-item {
+  font-size: 12px;
+}
+
+.c3-legend-background {
+  opacity: 0.75;
+  fill: white;
+  stroke: lightgray;
+  stroke-width: 1
+}
+
+/*-- Tooltip --*/
+
+.c3-tooltip {
+  border-collapse:collapse;
+  border-spacing:0;
+  background-color:#fff;
+  empty-cells:show;
+  -webkit-box-shadow: 7px 7px 12px -9px rgb(119,119,119);
+     -moz-box-shadow: 7px 7px 12px -9px rgb(119,119,119);
+          box-shadow: 7px 7px 12px -9px rgb(119,119,119);
+  opacity: 0.9;
+}
+.c3-tooltip tr {
+  border:1px solid #CCC;
+}
+.c3-tooltip th {
+  background-color: #aaa;
+  font-size:14px;
+  padding:2px 5px;
+  text-align:left;
+  color:#FFF;
+}
+.c3-tooltip td {
+  font-size:13px;
+  padding: 3px 6px;
+  background-color:#fff;
+  border-left:1px dotted #999;
+}
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.c3-tooltip td.value{
+  text-align: right;
+}
+
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: #000;
+  font-size: 16px;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777;
+}
+
+.c3-chart-arc .c3-gauge-value {
+  fill: #000;
+  font-size: 28px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #400E75;
+} 
+#title{
+  font-family: 'Stint Ultra Expanded', cursive;
+  height: 5em;
+  width: 100%;
+  border-bottom: 1px solid #400E75;
+
+}
+
+#title h1 {
+  font-size: 4em;
+  margin-top: 30px;
+  margin-left: 75px;
+}
+
+#title h1 a {
+  color: orange;
+  text-decoration: none;
+}
+
+
+#login_buttons{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: 5px;
+  width: 15%;
+
+}
+.button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  height: 37px;
+  width: 45%; /* auto */
+  text-align: center; 
+  background: #400E75;
+  }
+  
+.normal_buttons {  
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+.button a {
+  margin-top: 7px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+  
+  
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 58%;
+		margin-left: -300px;
+		width: 300px;
+		background: rgba(0,0,0,.0); 
+		position: absolute;
+		z-index: 101;
+		padding: 30px 40px 34px;
+		}
+		.reveal-modal h2 {
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			font-size: 3em;
+			color: white;
+			margin-bottom: 20px;
+		}
+
+		.reveal-modal ul {
+			color: red;
+			margin-top: 40px;
+			text-align: center;
+
+
+		}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+		} 
+	/*
+		
+	NOTES
+	
+	Close button entity is &#215;
+	
+	Example markup
+	
+	<div id="myModal" class="reveal-modal">
+		<h2>Awesome. I have it.</h2>
+		<p class="lead">Your couch.  I it's mine.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices aliquet placerat. Duis pulvinar orci et nisi euismod vitae tempus lorem consectetur. Duis at magna quis turpis mattis venenatis eget id diam. </p>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	
+	*/
+/* line 4, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 9, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_title,
+.score_show_composer {
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* line 16, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_title {
+  text-align: center;
+  margin-left: 5%;
+}
+
+/* line 24, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.player {
+  width: 10%;
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 30, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_composer {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* line 35, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_image {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+/* line 45, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_form {
+  margin-top: 4em;
+  width: 50%;
+  margin-left: 35%;
+}
+
+/* line 51, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_field {
+  line-height: 2em;
+  margin-bottom: 25empx;
+}
+
+/* line 55, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_field input {
+  line-height: 2em;
+  width: 50%;
+}
+
+/* line 60, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+*::-webkit-input-placeholder {
+  font-size: 1.25em;
+}
+
+/* line 63, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+*:-moz-placeholder {
+  /* FF 4-18 */
+  font-size: 2em;
+}
+
+/* line 67, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+*::-moz-placeholder {
+  /* FF 19+ */
+  font-size: 2em;
+}
+
+/* line 71, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 2em;
+}
+
+/* line 76, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_submit {
+  margin-left: 3%;
+  margin-top: 5em;
+}
+
+/* line 81, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_submit input[type="submit"] {
+  color: white;
+}
+
+/* line 85, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_image_field {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  margin-top: 10px;
+  margin-left: 15%;
+}
+
+/* line 93, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_public_field {
+  display: inline-block;
+  float: right;
+  width: 30%;
+  margin-right: 30%;
+}
+
+/* line 101, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores ul {
+  margin-top: 20px;
+}
+
+/* line 105, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores li {
+  border-bottom: 1px solid #400E75;
+  line-height: 50px;
+}
+
+/* line 110, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores {
+  padding-top: 40px;
+  width: 60%;
+  display: inline-block;
+  float: right;
+  color: #400E75;
+  padding-right: 21%;
+}
+
+/* line 120, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores h3 {
+  width: 100%;
+  margin-left: 20%;
+  text-align: center;
+}
+
+/* line 126, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.search {
+  text-align: center;
+}
+
+/* line 130, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores h3 {
+  font-size: 1.5em;
+  padding-bottom: .5em;
+  text-decoration: underline;
+  width: 50%;
+  display: inline-block;
+}
+
+/* line 139, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores a {
+  text-decoration: none;
+}
+
+/* line 145, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores a:hover {
+  color: orange;
+}
+
+/* line 149, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores input[type='text'] {
+  line-height: 2.5em;
+  width: 30%;
+}
+
+/* line 153, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores input[type='submit'] {
+  width: 15%;
+  color: #FFFFFF;
+}
+
+/* line 158, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.pub_scores h4 {
+  margin-top: 2em;
+}
+
+/* line 162, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+#viewer {
+  width: 70%;
+  margin-left: 15%;
+}
+
+/* line 166, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.analyze_link {
+  margin-left: 10%;
+  display: inline-block;
+  float: left;
+  width: 40%;
+}
+
+/* line 174, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_delete {
+  display: inline-block;
+  float: right;
+  width: 40%;
+  margin-right: 10%;
+  text-align: right;
+}
+
+/* line 182, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_delete form {
+  margin-top: -5px;
+}
+
+/* line 186, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.deletebutton {
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+  font-size: 1em;
+}
+
+/* line 196, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.stick {
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  width: 100%;
+}
+
+/* line 202, /Users/trentcs/Desktop/DBC/pitches_and_rows/app/assets/stylesheets/scores.css.scss */
+.score_show_instruments {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.profile_picture {
+
+	width: 175px;
+  height: 140px;
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 2%;
+  border: 1px solid #400E75;
+}
+
+#profile_head {
+  height: 100px;
+  background-color: lightgray;
+}
+
+#profile_username{
+  color: #400E75;
+  margin-top: 60px;
+  font-size: 2.5em;
+  margin-left: 20%;
+  width: 50%;
+  display: inline-block;
+}
+
+#profile_username h2{
+  margin-bottom: -300px;
+}
+
+#edit_link {
+  margin-top: 8%;
+  margin-left: 75px;
+  width: 10%;
+  float: left;
+  display: inline-block;
+}
+
+#edit_link a,
+.my_scores a
+{
+    text-decoration: none;
+}
+
+#edit_link a:hover,
+.my_scores a:hover
+{
+    color: orange;
+}
+
+
+.my_scores {
+  padding-top: 40px;
+  width: 60%;
+  display: inline-block;
+  float: right;
+  color: #400E75;
+  padding-right: 18%;
+}
+
+.my_scores h3 {
+  font-size: 1.5em;
+  padding-bottom: .5em;
+  text-decoration: underline;
+  width: 50%;
+  display: inline-block;
+}
+
+.my_scores ul {
+  margin-top: 20px;
+}
+
+.my_scores li {
+  border-bottom: 1px solid #400E75;
+  line-height: 50px;
+}
+
+.score_title {
+  display: inline-block;
+  width: 40%;
+}
+.composer {
+  
+}
+.thumbnail {
+  float: right;
+  margin-right: 30px;
+  height: 50px;
+  /*border: 1px solid black;*/
+}
+
+.add_score {
+  width: 40%;
+  text-align: right;
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+}
+
+.add_score a { 
+  margin-left: 1px;
+}
+
+
+
+.user_edit {
+  text-align: center;
+  margin-left: 13%;
+  width: 70%;
+  margin-top: 30px;
+
+}
+.edit_user_field {
+  line-height: 2em;
+}
+
+.edit_user_field input[type='text'] {
+  line-height: 2em;
+  width: 20%;
+}
+
+.edit_email {
+  margin-left: 30px;
+}
+
+.edit_image {
+  margin-left: 30px;
+}
+
+.edit_user_submit{
+  width: 45%;
+  margin-left: 30%;
+}
+
+.edit_user_submit input[type=submit] {
+  color: white;
+}
+
+
+
+
+#backsplash {
+    height: 500px;
+    width: 100%;
+    background: url('notes.jpg');
+  }
+
+#backsplash h2 {
+  padding-top: 30%;
+  font-family: 'Roboto', sans-serif; 
+  font-size: 4em;
+  z-index: 0;
+  color: lightgray;
+  margin-left: 10%;
+
+}
+
+/*
+#backsplash_2 {
+    height: 500px;
+    width: 100%;
+    background: url('smbtheme.png');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 15% center;
+  }*/
+
+  .login_field {
+      width: 80%;
+      margin-bottom: 15px;
+      margin-left: 25px;
+      line-height: 2em;
+
+  }
+
+  .login_submit {
+    background: #FFFFFF;
+    color: black;
+    margin-left: 27%;
+  }
+
+  .login_submit:hover {
+    background-color: orange;
+  }
+    
