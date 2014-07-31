@@ -2,21 +2,35 @@
 <div class = 'charts'>
   <h1>Analysis</h1>
   <ul class = 'chart-links'>
-    <li><%= link_to "Pitch Range", '#pitch_range', class: 'active link_button' %></li>
-    <li><%= link_to "Melodic Contour", '#melodic_contour', class: 'link_button' %></li>
-    <li><%= link_to "Duration Count", '#duration_count', class: 'link_button' %></li>
+    <li><%= link_to "Pitch Range", '#pitch_range_container', class: 'active link_button' %></li>
+    <li><%= link_to "Melodic Contour", '#melodic_contour_container', class: 'link_button' %></li>
+    <li><%= link_to "Duration Count", '#duration_count_container', class: 'link_button' %></li>
   </ul>
 </div>
+
+  <div id="pitch_range_container" class='chart'>
+    <div class='subtitle' id='pitch_range_subtitle'>
+      <h2>Compares the total range of the selected score with your scores.</h2>
+    </div>
+    <div, id='pitch_range'></div>
+  </div>
+
+  <div id="melodic_contour_container" class="chart">
+    <div  class='subtitle' id='melodic_contour_subtitle'>
+      <h2>Displays the melodic contour of all parts of the selected score.</h2>
+    </div>
+    <div id="melodic_contour"></div>
+  </div>
+
+   
   
-  <div class = 'chart', id='pitch_range'>
-    <h2>Pitch Range</h2>
-
+  <div id="duration_count_container" class="chart">
+    <div class='subtitle' id='duration_count_subtitle'>
+      <h2>Displays the rhythmic distribution of the selected piece. </h2>
+    </div>
+    <div id="duration_count"></div>
   </div>
 
-  <div class = 'chart', id="melodic_contour">
-    <h2>Melodic Contour</h2>
-  </div>
 
-  <div class = 'chart', id="duration_count">
-    <h2>Duration Count</h2>
-  </div>
+ 
+  

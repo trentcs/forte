@@ -15,6 +15,10 @@
   margin-left: 5%;
 }
 
+.subtitle {
+  text-align: center;
+}
+
 .link_button {
     background-color:#400E75;
     display:inline-block;
