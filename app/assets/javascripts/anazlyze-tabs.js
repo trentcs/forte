@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('#pitch_range').show();
+  $('#pitch_range_container').show();
   $(window).resize();
   $("li").click(function(){
     var hrefValue = $(this).children().attr("href");
