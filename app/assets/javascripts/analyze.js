@@ -35,7 +35,7 @@ $(function() {
 	      });
 
   $("#pitch_range").click(function() {
-
+    
     pitchRangeChart.load({
         columns: gon.all_pitch_range_data
     });

@@ -61,7 +61,7 @@ class Score < ActiveRecord::Base
     self.parts.each do |part|
       sci_notations = part.notes.map{|note| note.sci_notation}.compact.map{|note| note.downcase}
       part_frequencies << ["Part #{part.part_number}: #{part.instrument_name}"] +sci_notations.map{|note| sci_to_freq(note)}
-      part_frequencies << ["Part #{part.part_number}: #{part.instrument_name} x"] + part.notes.map{|note| position_in_score(note, part)} 
+      part_frequencies << ["Part #{part.part_number}: #{part.instrument_name} x"] + part.notes.map{|note| position_in_score(note, part)}
     end
     part_frequencies
   end
@@ -107,4 +107,3 @@ class Score < ActiveRecord::Base
   # end
 
 end
-
