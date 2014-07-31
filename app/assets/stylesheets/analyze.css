@@ -1,11 +1,12 @@
 .charts {
   width: 100%;
   text-align: center;
+  margin-top: 24px;
 }
 
 .charts h1 {
   font-size: 2em;
-  margin-top: 10px;
+
 }
 .chart {
   display: none;

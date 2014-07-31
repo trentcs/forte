@@ -13,6 +13,20 @@ body {
   margin-top: 20px;
 }
 
+.score_show_title {
+  text-align: center;
+  margin-left: 5%;
+}
+
+
+
+
+.player {
+  width: 10%;
+  display: inline-block;
+  text-align: left;
+
+}
   .score_show_composer {
     font-size: 1.5em;
     margin-top: 10px;
@@ -180,9 +194,14 @@ body {
   font-size: 1em;
 }
 .stick {
-    position:fixed;
-    top:0px;
-    background-color: white;
-    width: 100%;
+  position:fixed;
+  top:0px;
+  background-color: white;
+  width: 100%;
 }
+.score_show_instruments {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
 
+}
