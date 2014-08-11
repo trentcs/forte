@@ -8,7 +8,6 @@ class Score < ActiveRecord::Base
   has_many :notes, through: :measures
 
   validates :title, presence: true
-  # validates :user, presence: true
   validates :composer, presence: true
 
   mount_uploader :music_xml, OriginalScorePhotoUploader
@@ -20,9 +19,10 @@ class Score < ActiveRecord::Base
   end
 
   def create_parts
-    $hash = Hash.from_xml(music_xml.file.read)
+    ScoreHash.hash= Hash.from_xml(music_xml.file.read)
+    hash = ScoreHash.hash
 
-    parts = $hash["score_partwise"]["part_list"]["score_part"]
+    parts = hash["score_partwise"]["part_list"]["score_part"]
     parts = [parts] if parts.is_a?(Hash)
 
     parts.each do |part|
@@ -97,13 +97,5 @@ class Score < ActiveRecord::Base
     self.notes.each {|note| duration_counts[note.note_type] += 1 if note.note_type.nil? == false}
     duration_counts.to_a
   end
-
-  # def sort_scientific_notation
-  #   pitches = []
-  #   self.notes.each {|note| pitches <<  note.sci_notation }
-  #   pitches = pitches.compact
-  #   pitches.join("").split("")
-  #   Hash[*pitches.reverse]
-  # end
 
 end

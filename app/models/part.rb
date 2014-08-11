@@ -2,17 +2,15 @@ class Part < ActiveRecord::Base
   belongs_to :score
   has_many :measures
   has_many :notes, through: :measures
-
   validates :score_id, :instrument_name, :part_number, presence: :true
-
   after_create :create_measures
 
 
   def create_measures
-    if $hash["score_partwise"]["part"].is_a?(Hash)
-      measures = $hash["score_partwise"]["part"]["measure"]
+    if ScoreHash.hash["score_partwise"]["part"].is_a?(Hash)
+      measures = ScoreHash.hash["score_partwise"]["part"]["measure"]
     else
-      measures = $hash["score_partwise"]["part"][part_number - 1]["measure"]
+      measures = ScoreHash.hash["score_partwise"]["part"][part_number - 1]["measure"]
     end
     
     measures = [measures] if measures.is_a?(Hash)

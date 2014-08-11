@@ -7,6 +7,4 @@ class User < ActiveRecord::Base
   #profile picture using carrierwave
   mount_uploader :user_image_url, ProfilePictureUploader
 
-  #set default image before creating a user
-
 end

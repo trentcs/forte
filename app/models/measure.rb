@@ -4,17 +4,16 @@ class Measure < ActiveRecord::Base
   has_one :clef
   has_one :measure_time
   has_many :notes
-
   validates :number, :divisions, :part_id, presence: :true
-
   after_create :create_key, :create_clef, :create_time, :create_notes
+  include ScoresHelper
 
 
   def create_key
-    if $hash["score_partwise"]["part"].is_a?(Hash)
-      measure_attributes = $hash["score_partwise"]["part"]["measure"][self.number - 1]["attributes"]
+    if ScoreHash.hash["score_partwise"]["part"].is_a?(Hash)
+      measure_attributes = ScoreHash.hash["score_partwise"]["part"]["measure"][self.number - 1]["attributes"]
     else
-      measure_attributes = $hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["attributes"]
+      measure_attributes = ScoreHash.hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["attributes"]
     end
     
 
@@ -27,10 +26,10 @@ class Measure < ActiveRecord::Base
   end
 
   def create_clef
-    if $hash["score_partwise"]["part"].is_a?(Hash)
-      measure_attributes = $hash["score_partwise"]["part"]["measure"][self.number - 1]["attributes"]
+    if ScoreHash.hash["score_partwise"]["part"].is_a?(Hash)
+      measure_attributes = ScoreHash.hash["score_partwise"]["part"]["measure"][self.number - 1]["attributes"]
     else
-      measure_attributes = $hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["attributes"]
+      measure_attributes = ScoreHash.hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["attributes"]
     end
 
     if measure_attributes && measure_attributes["clef"]
@@ -52,10 +51,10 @@ class Measure < ActiveRecord::Base
   end
 
   def create_time
-    if $hash["score_partwise"]["part"].is_a?(Hash)
-      measure_attributes = $hash["score_partwise"]["part"]["measure"][self.number - 1]["attributes"]
+    if ScoreHash.hash["score_partwise"]["part"].is_a?(Hash)
+      measure_attributes = ScoreHash.hash["score_partwise"]["part"]["measure"][self.number - 1]["attributes"]
     else
-      measure_attributes = $hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["attributes"]
+      measure_attributes = ScoreHash.hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["attributes"]
     end
 
     if measure_attributes && measure_attributes["time"]
@@ -67,10 +66,10 @@ class Measure < ActiveRecord::Base
   end
 
   def create_notes
-    if $hash["score_partwise"]["part"].is_a?(Hash)
-      notes = $hash["score_partwise"]["part"]["measure"][self.number - 1]["note"]
+    if ScoreHash.hash["score_partwise"]["part"].is_a?(Hash)
+      notes = ScoreHash.hash["score_partwise"]["part"]["measure"][self.number - 1]["note"]
     else
-      notes = $hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["note"]
+      notes = ScoreHash.hash["score_partwise"]["part"][self.part.part_number - 1]["measure"][self.number - 1]["note"]
     end
     
     notes = [notes] if notes.is_a?(Hash)
